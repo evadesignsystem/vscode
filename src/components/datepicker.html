@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <link rel="stylesheet" href="/dist/output.css">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@main/dist/output.css">-->
+</head>
+<body class="dark:bg-base-black">
+
+
+    <!-- Header -->
+    <nav class="z-30 mb-4 bg-neutral-lighter shadow-sm shadow-neutral-light/50 transition-all ease-in-out sticky top-0">
+        <div class="mx-auto px-4">
+            <div class="relative flex h-16 items-center justify-between">
+                <span class="select-none flex justify-center items-center font-bold text-2xl text-primary">
+                    <img class="min-w-fit h-6 mr-2" src="/src/img/newlogo-eva.svg" alt="">
+                    suporte
+                </span>
+                <h1 class="text-ambient-black">menu</h1>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex flex-wrap gap-4 min-h-full w-full">
+
+        <!-- Input Text -->
+        <div class="w-72 relative">
+            <input id="username" type="text" class="peer input-floating" placeholder="Username"/>
+            <label for="username" class="label-floating">Username</label>
+        </div>
+        <!-- Data Picker -->
+        <div class="flex items-center form-floating justify-center">
+            <div class="datepicker relative xl:w-96">
+              <input id="dp-floating" type="text" class="peer input-floating" placeholder="Selecione a data" />
+              <label for="dp-floating" class="label-floating">Selecione a data</label>
+            </div>
+        </div>
+        
+        <!-- class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" -->
+    </div>
+
+</body>
+<!-- from node_modules -->
+<script src="/node_modules/tw-elements/dist/js/index.min.js"></script>
+
+</html>

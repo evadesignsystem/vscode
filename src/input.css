@@ -28,7 +28,7 @@
 /* INPUTS */
 
 .input-floating {
-    @apply py-2 px-2.5 w-full border border-neutral-light border-2 rounded-lg placeholder-transparent caret-primary focus:outline-none focus:border focus:border-primary/50 focus:ring-1 focus:ring-primary;
+    @apply py-2 px-2.5 w-full border-neutral-light border rounded-lg placeholder-transparent caret-primary focus:outline-none  focus:outline-2 focus:outline-primary/70;
 };
 .label-floating {
     @apply absolute bg-gradient-to-b from-white via-white to-transparent left-3 -top-2.5 px-1 text-neutral-light text-sm antialiased transition-all pointer-events-none peer-placeholder-shown:text-base peer-placeholder-shown:text-neutral peer-placeholder-shown:top-2.5 peer-focus:-top-2.5 peer-focus:bg-gradient-to-b from-white to-transparent peer-focus:text-primary peer-focus:px-1 peer-focus:text-sm;
@@ -45,3 +45,42 @@
 
 
 @tailwind utilities;
+
+
+/* DATE PICKER */
+.datepicker-modal-container{
+    @apply !rounded-2xl;
+}
+.datepicker-header {
+    @apply !bg-primary rounded-t-2xl;
+}
+ .datepicker-cell.selected .datepicker-cell-content{
+    @apply !bg-primary/80;
+}
+.datepicker-cell.current .datepicker-cell-content, .datepicker-cell.selected .datepicker-cell-content{
+    @apply border-none;
+}
+.datepicker-cell:not(.disabled):not(.selected):hover .datepicker-cell-content{
+    @apply !bg-neutral-lighter;
+}
+.datepicker-footer{
+    @apply gap-2;
+}
+.datepicker-footer-btn, .datepicker-toggle-icon {
+    @apply text-primary rounded-full ;
+}
+.datepicker-footer-btn:focus, .datepicker-footer-btn:hover {
+    /* @apply hover:bg-primary-light; */
+}
+.datepicker-clear-btn{
+    @apply hidden;
+}
+.datepicker-cancel-btn{
+    @apply lowercase font-semibold tracking-normal antialiased secondary-text-button rounded-button;
+}
+.datepicker-ok-btn{
+    @apply bg-primary-lighter lowercase font-semibold tracking-normal antialiased primary-text-button rounded-button;
+}
+.datepicker-backdrop{
+    @apply backdrop-filter backdrop-blur;
+}
