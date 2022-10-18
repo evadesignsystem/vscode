@@ -782,7 +782,7 @@ video {
 }
 
 .peer:-moz-placeholder-shown ~ .label-floating {
-  top: 0.625rem;
+  top: 0.6rem;
   font-size: 1rem;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
@@ -790,7 +790,7 @@ video {
 }
 
 .peer:placeholder-shown ~ .label-floating {
-  top: 0.625rem;
+  top: 0.6rem;
   font-size: 1rem;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
@@ -832,6 +832,127 @@ video {
   border-top-left-radius: 0.375rem;
   border-top-right-radius: 0.375rem;
   padding: 1rem;
+}
+
+/* DATE PICKER - Classes atualizadas */
+
+.datepicker-modal-container {
+  border-radius: 1rem !important;
+}
+
+.datepicker-header {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(24 122 129 / var(--tw-bg-opacity)) !important;
+}
+
+.datepicker-cell.selected .datepicker-cell-content {
+  background-color: rgb(24 122 129 / 0.8) !important;
+}
+
+.datepicker-cell.current .datepicker-cell-content,  .datepicker-cell.selected .datepicker-cell-content {
+  border-style: none;
+}
+
+.datepicker-cell:not(.disabled):not(.selected):hover .datepicker-cell-content {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity)) !important;
+}
+
+.datepicker-footer {
+  gap: 0.5rem;
+}
+
+.datepicker-footer-btn,  .datepicker-toggle-icon {
+  border-radius: 9999px;
+  --tw-text-opacity: 1;
+  color: rgb(24 122 129 / var(--tw-text-opacity));
+}
+
+.datepicker-footer-btn:focus, .datepicker-footer-btn:hover {
+  /* @apply hover:bg-primary-light; */
+}
+
+.datepicker-clear-btn {
+  display: none;
+}
+
+.datepicker-cancel-btn {
+  text-transform: lowercase;
+  letter-spacing: 0em;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(54 118 224 / var(--tw-text-opacity));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.datepicker-cancel-btn:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 243 254 / var(--tw-bg-opacity));
+}
+
+.datepicker-cancel-btn:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(54 118 224 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.datepicker-ok-btn {
+  text-transform: lowercase;
+  letter-spacing: 0em;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(232 242 243 / var(--tw-bg-opacity));
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(24 122 129 / var(--tw-text-opacity));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.datepicker-ok-btn:hover {
+  background-color: rgb(149 194 198 / 0.4);
+  --tw-text-opacity: 1;
+  color: rgb(17 87 94 / var(--tw-text-opacity));
+}
+
+.datepicker-ok-btn:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 122 129 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.datepicker-backdrop {
+  --tw-backdrop-blur: blur(8px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .pointer-events-none {
@@ -929,12 +1050,12 @@ video {
   margin-right: 1.25rem;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .mr-3 {
   margin-right: 0.75rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .mb-3 {
@@ -1359,6 +1480,10 @@ video {
   padding: 1rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1597,127 +1722,6 @@ video {
 
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
-/* DATE PICKER */
-
-.datepicker-modal-container {
-  border-radius: 1rem !important;
-}
-
-.datepicker-header {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(24 122 129 / var(--tw-bg-opacity)) !important;
-}
-
-.datepicker-cell.selected .datepicker-cell-content {
-  background-color: rgb(24 122 129 / 0.8) !important;
-}
-
-.datepicker-cell.current .datepicker-cell-content,  .datepicker-cell.selected .datepicker-cell-content {
-  border-style: none;
-}
-
-.datepicker-cell:not(.disabled):not(.selected):hover .datepicker-cell-content {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity)) !important;
-}
-
-.datepicker-footer {
-  gap: 0.5rem;
-}
-
-.datepicker-footer-btn,  .datepicker-toggle-icon {
-  border-radius: 9999px;
-  --tw-text-opacity: 1;
-  color: rgb(24 122 129 / var(--tw-text-opacity));
-}
-
-.datepicker-footer-btn:focus, .datepicker-footer-btn:hover {
-  /* @apply hover:bg-primary-light; */
-}
-
-.datepicker-clear-btn {
-  display: none;
-}
-
-.datepicker-cancel-btn {
-  text-transform: lowercase;
-  letter-spacing: 0em;
-  display: inline-block;
-  display: flex;
-  align-items: center;
-  border-radius: 9999px;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(54 118 224 / var(--tw-text-opacity));
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.datepicker-cancel-btn:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(235 243 254 / var(--tw-bg-opacity));
-}
-
-.datepicker-cancel-btn:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(54 118 224 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.datepicker-ok-btn {
-  text-transform: lowercase;
-  letter-spacing: 0em;
-  display: inline-block;
-  display: flex;
-  align-items: center;
-  border-radius: 9999px;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(232 242 243 / var(--tw-bg-opacity));
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(24 122 129 / var(--tw-text-opacity));
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.datepicker-ok-btn:hover {
-  background-color: rgb(149 194 198 / 0.4);
-  --tw-text-opacity: 1;
-  color: rgb(17 87 94 / var(--tw-text-opacity));
-}
-
-.datepicker-ok-btn:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(24 122 129 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.datepicker-backdrop {
-  --tw-backdrop-blur: blur(8px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .hover\:bg-primary-light:hover {
