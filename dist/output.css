@@ -880,10 +880,6 @@ video {
   color: rgb(25 126 133 / var(--tw-text-opacity));
 }
 
-.datepicker-footer-btn:focus, .datepicker-footer-btn:hover {
-  /* @apply hover:bg-primary-light; */
-}
-
 .datepicker-clear-btn {
   display: none;
 }
@@ -1203,10 +1199,6 @@ video {
   height: 0.5rem;
 }
 
-.h-\[calc\(100vh-36px\)\] {
-  height: calc(100vh - 36px);
-}
-
 .h-\[calc\(100vh-64px\)\] {
   height: calc(100vh - 64px);
 }
@@ -1267,22 +1259,8 @@ video {
   width: 180px;
 }
 
-.w-32 {
-  width: 8rem;
-}
-
-.w-40 {
-  width: 10rem;
-}
-
 .w-screen {
   width: 100vw;
-}
-
-.w-max {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 
 .min-w-fit {
@@ -1631,12 +1609,12 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-neutral-lighter\/50 {
-  background-color: rgb(245 245 245 / 0.5);
-}
-
 .bg-neutral-light\/50 {
   background-color: rgb(195 199 199 / 0.5);
+}
+
+.bg-neutral-lighter\/50 {
+  background-color: rgb(245 245 245 / 0.5);
 }
 
 .bg-clip-padding {
@@ -1665,10 +1643,6 @@ video {
 
 .p-2 {
   padding: 0.5rem;
-}
-
-.p-16 {
-  padding: 4rem;
 }
 
 .p-0 {
@@ -1713,11 +1687,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .\!pr-2\.5 {
@@ -1979,10 +1948,6 @@ video {
   transition-duration: 200ms;
 }
 
-.duration-500 {
-  transition-duration: 500ms;
-}
-
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -2036,16 +2001,6 @@ video {
 .focus\:bg-white:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.focus\:text-neutral:focus {
-  --tw-text-opacity: 1;
-  color: rgb(125 129 129 / var(--tw-text-opacity));
-}
-
-.focus\:text-neutral-darker:focus {
-  --tw-text-opacity: 1;
-  color: rgb(30 38 38 / var(--tw-text-opacity));
 }
 
 .focus\:opacity-100:focus {
