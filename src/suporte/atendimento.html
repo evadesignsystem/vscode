@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="antialiased">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" /> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <link rel="stylesheet" href="/dist/output.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@main/dist/output.css"> -->
+</head>
+
+<body class="bg-white dark:bg-zinc-darker/95">
+    
+        <!-- MAIN -->
+        <div class="flex">
+            <!-- LEFT SIDEBAR -->
+            <main class="z-20 flex flex-col justify-between fixed h-screen w-16 xl:w-60 bg-[#fff] dark:bg-zinc-darker drop-shadow-xl transition-all ease-in-out">
+                <!-- HEADER -->
+                <header class="flex flex-col">
+
+                        <!-- LOGO EVA -->
+                        <span class="select-none justify-center items-center font-bold text-xl text-neutral-dark my-8 hidden xl:flex dark:text-white">
+                            <img class="h-5 xl:w-16 xl:h-6 xl:mr-2" src="/src/img/newlogo-eva.svg" alt="">
+                            <span class="xl:flex">suporte</span>
+                        </span>
+
+                        <!-- MENU PRINCIPAL -->
+                        <nav class="xl:mb-12"> <!-- h-96 overflow-y-auto (para scrollar navegação) -->
+                            <ul class="flex flex-col p-6 gap-2">
+
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center xl:justify-start py-2 xl:px-4 rounded-xl text-sm text-neutral-darker xl:bg-primary-lighter dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
+                                        target="loading_content">
+                                        <span class="material-symbols-sharp text-2xl xl:mr-3">support_agent</span>
+                                        <span class="hidden xl:block">Atendimento</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#distribuidoras" class="flex items-center justify-center xl:justify-start py-2 xl:px-4 text-sm text-neutral dark:text-white dark:hover:text-neutral-light font-semibold rounded-xl xl:active:bg-primary-lighter hover:text-neutral-dark"
+                                        target="loading_content" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="distribuidoras">
+                                        <span class="material-symbols-sharp text-2xl xl:mr-3">warehouse</span>
+                                        <span class="hidden xl:block">Expedição</span>
+                                        <span class="material-symbols-sharp hidden xl:block text-2xl xl:ml-1">expand_more</span>
+                                    </a>
+
+                                    <div id="distribuidoras" class="hidden xl:block collapse"> <!-- .COLLAPSE necessária para reload com submenu fechado -->
+                                        <a href="#"
+                                            class="flex items-center justify-center xl:justify-start py-1 xl:ml-[50px] text-xs text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
+                                            target="loading_content">
+                                            <span class="material-symbols-sharp text-xl xl:mr-1">home_pin</span>
+                                            <span class="hidden xl:block">BAHIA</span>
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center justify-center xl:justify-start py-1 xl:ml-[50px] text-xs text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
+                                            target="loading_content">
+                                            <span class="material-symbols-sharp text-xl xl:mr-1">home_pin</span>
+                                            <span class="hidden xl:block">PARÁ</span>
+                                        </a>
+                                    </div>
+                                    
+                                </li>
+                                
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center xl:justify-start py-2 xl:px-4 text-sm text-neutral dark:text-white dark:hover:text-neutral-light dark:font-semibold font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
+                                        target="loading_content">
+                                        <span class="material-symbols-sharp text-2xl xl:mr-3">
+                                            timer
+                                        </span>
+                                        <span class="hidden xl:block">Lista CRON</span>
+                                    </a>
+                                </li>
+        
+                                <li>
+                                    <a href="#" class="flex items-center justify-center xl:justify-start py-2 xl:px-4 text-sm text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
+                                        target="loading_content">
+                                        <span class="material-symbols-sharp text-2xl xl:mr-3">
+                                            barcode
+                                        </span>
+                                        <span class="hidden xl:block">Boleto</span>
+                                    </a>
+                                </li>
+        
+                                <li>
+                                    <a href="#" class="flex items-center justify-center xl:justify-start py-2 xl:px-4 text-sm text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
+                                        target="loading_content">
+                                        <span class="material-symbols-sharp text-2xl xl:mr-3">
+                                            visibility
+                                        </span>
+                                        <span class="hidden xl:block">Manual Review</span>
+                                    </a>
+                                </li>
+        
+                                <li>
+                                    <a href="#" class="flex items-center justify-center xl:justify-start py-2 xl:px-4 text-sm text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
+                                        target="loading_content">
+                                        <span class="material-symbols-sharp text-2xl xl:mr-3">
+                                            store
+                                        </span>
+                                        <span class="hidden xl:block">Lojas</span>
+                                    </a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+
+                </header>
+                <!-- USER CONFIGS / LOGOUT -->
+                <div class="flex flex-col items-center xl:w-60 pb-2.5 xl:pb-12 transition-all ease-out duration-200">
+                    <div class="hidden xl:flex flex-col justify-center items-center mb-8">
+                        <div class="bottom-40 flex w-14 h-14 items-center mb-2">
+                            <img src="../img/matheus.png" class="rounded-full h-12 ml-1" alt="Online">
+                            <span class="relative right-4 top-5 rounded-full border-2 border-white p-1 h-2 w-2 bg-positive"></span>
+                        </div>
+                        <strong class="text-black dark:text-white">Matheus Willian</strong>
+                        <p class="text-xs font-medium antialiased text-neutral/80 dark:text-neutral-light">matheus.willian@wj.com.br</p>
+                    </div>
+                    <div class="flex flex-col xl:flex-row gap-4 xl:gap-8">
+                        <a href="#" class="xl:block xl:border border-neutral-light/80 rounded-xl xl:hover:bg-primary xl:hover:border-primary">
+                            <span class="material-symbols-sharp p-2 xl:hover:animate-spin text-neutral hover:text-neutral-dark xl:hover:text-white dark:text-white transition-colors">
+                                settings
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="material-symbols-sharp p-2 xl:border border-neutral-light/80 rounded-xl text-neutral hover:text-neutral-dark xl:hover:bg-negative xl:hover:text-white hover:border-negative dark:text-white transition-colors">
+                                logout
+                            </span>
+                        </a>    
+                    </div>
+                </div>
+            </main>
+            <!-- RIGHT SIDEBAR -->
+            <!-- <nav class="w-[180px] bg-white shadow-sm shadow-neutral-light/50 sticky right-0 order-1">
+                <div class="mx-auto px-4">
+                    <div class="relative flex h-16 items-center justify-between">
+
+                        <h1 class="text-black">menu</h1>
+                    </div>
+                </div>
+            </nav> -->
+
+            <!-- CONTENT -->
+            <div class="w-screen h-screen overflow-hidden">
+
+                <nav class="w-full ml-16 xl:ml-60 z-10 bg-neutral-lighter shadow-sm shadow-neutral-light/50 transition-all ease-in-out sticky top-0">
+                    <div class="mx-auto px-4">
+                        <div class="relative flex h-16 items-center justify-between">
+
+                            <ul class="navbar-nav flex pl-0 list-style-none mr-auto">
+                                <li class="p-2">
+                                  <a class="text-neutral hover:text-neutral-darker rounded-full" href="#atendimento">Atendimento</a>
+                                </li>
+                                <li class="p-2">
+                                    <a class="text-neutral hover:text-neutral-darker p-0" href="#localizacao">Localização</a>
+                                </li>
+                                <li class="nav-item p-2">
+                                    <a class="text-neutral hover:text-neutral-darker p-0" href="#loja">Loja</a>
+                                </li>
+
+                                <li class="px-4 rounded-full text-neutral-dark bg-neutral-light/50 font-semibold text-sm flex justify-center items-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                                    <a class="text-neutral hover:text-neutral-darker p-0" href="#boleto">Boleto</a>
+                                </li>
+
+                            </ul>   
+
+                        </div>
+                    </div>
+                </nav>
+
+                <main class="ml-16 xl:ml-60 fixed h-[calc(100vh-64px)] snap-mandatory snap-y overflow-y-scroll scroll-smooth">
+    
+                    <section id="atendimento" class="flex flex-col gap-4 h-screen bg-neutral-lighter/50 px-16 py-8 snap-start snap-always antialiased">
+                        <h2 class="text-2xl font-semibold">Atendimento</h2>
+    
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet euismod lacus, at ullamcorper sem. Sed sed sapien et mi dignissim tempor. Fusce libero tortor, lacinia eget dolor vitae, laoreet laoreet mauris. Nam consequat arcu tincidunt metus sodales sagittis. Mauris commodo enim ac pharetra lacinia. Donec quis posuere dui. Nunc at risus ac tellus commodo dictum sit amet nec leo. Duis nisl ante, tristique eu scelerisque ut, sagittis non ante. Nullam quis justo facilisis lacus vestibulum congue. Praesent egestas lacus id pulvinar pretium.
+    
+                            </p>
+                            <p>Fusce ullamcorper eros nisl, sed ullamcorper tellus tristique et. Pellentesque sed turpis vel eros iaculis elementum eget eu magna. Quisque felis ante, venenatis et ullamcorper in, viverra eget velit. Donec consectetur nisl vitae libero tincidunt, id bibendum mi tempus. Integer tincidunt magna diam. Curabitur egestas sem eros. Nulla leo massa, mattis a ullamcorper et, lacinia eget eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut egestas urna nisi, et placerat augue eleifend in. Nam in lacus ut elit euismod placerat.
+        
+                            </p>
+                            <p>Cras non mauris ac nisl iaculis hendrerit non quis libero. Cras at pulvinar eros. Maecenas porta risus ut arcu laoreet, pulvinar consequat elit gravida. Duis pharetra, urna at pretium bibendum, nibh neque ornare ex, at sagittis augue dolor vitae leo. Praesent at magna varius, tincidunt libero nec, vestibulum leo. Praesent non hendrerit ligula. Quisque sollicitudin aliquam arcu. Donec vulputate elit at euismod commodo. Phasellus id justo sed turpis suscipit rhoncus eget ac magna. Nunc fringilla pellentesque velit sed mattis. Proin a ipsum condimentum, congue tellus ac, lobortis dui.
+        
+                            </p>
+                            <p>Fusce quis nunc et neque dictum suscipit. Cras et placerat est. Maecenas vel ligula congue, egestas felis a, pulvinar nisi. Sed et eros at nisi rutrum aliquet vitae a nisl. Integer scelerisque metus eu ipsum suscipit, quis sollicitudin augue laoreet. Suspendisse at risus bibendum, vestibulum odio aliquet, sollicitudin diam. Phasellus non erat massa. In egestas nunc sed nunc tempus, non fermentum ipsum bibendum. Proin tristique ullamcorper elit, ac hendrerit metus luctus in.
+        
+                            </p>
+    
+    
+                    </section>
+    
+                    <section id="localizacao" class="flex flex-col h-screen bg-white px-16 py-8 snap-start snap-always">
+                        <h2 class="text-2xl font-semibold mb-8">Localização</h2>
+    
+                        <div class="flex flex-wrap gap-4">
+    
+                            <!-- Input Text -->
+                            <div class="w-72 relative">
+                                <input id="username" type="text" class="peer input-floating" placeholder="Username"/>
+                                <label for="username" class="label-floating">Username</label>
+                            </div>
+                            
+                            <!-- Input Password -->
+                            <div class="w-72 relative">
+                                <input id="password" type="password" class="peer input-floating" placeholder="password"/>
+                                <label for="password" class="label-floating disabled">Password</label>
+                            </div>
+                        
+                            <!-- Buttons -->
+                        
+                            <div class="mb-4 col-span-2">
+                                <button type="button" class="rounded-button secondary-button" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                <!-- <i class="fa-solid fa-trash-can mr-3"></i>-->
+                                    secondary
+                                </button>
+                            </div>
+                        
+                            <div class="col-span-1">
+                                <button type="button" class="rounded-button-io secondary-button" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                    <i class="fa-solid fa-trash-can h-6 w-6 flex justify-center items-center"></i>
+                                </button>
+                            </div>
+                        
+                            <div class="mb-4 col-span-2">
+                                <button type="button" class="rounded-button primary-button" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                    <i class="fa-solid fa-trash-can mr-3"></i>
+                                    primary button
+                                </button>
+                            </div>
+                        
+                            <div class="mb-4 col-span-2">
+                                <button type="button" class="rounded-button secondary-button" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                    <i class="fa-solid fa-trash-can mr-3"></i>
+                                    button
+                                </button>
+                            </div>
+                        
+                            <div>
+                                <button type="button" class="square-button secondary-button" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                    secondary button
+                                </button>
+                            </div>
+                        
+                            <div class="mb-4 col-span-2">
+                                <button type="button" class="rounded-button primary-button" data-mdb-ripple="true" data-mdb-ripple-color="light" data-bs-toggle="modal" data-bs-target="#modal-teste">
+                                    <i class="fa-solid fa-trash-can mr-3"></i>
+                                primary button
+                                </button>
+                            </div>
+                        
+                            <!-- Modal -->
+                            <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto backdrop-filter backdrop-blur" id="modal-teste" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
+                                <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none">
+                                    <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-2xl outline-none text-current">
+                                        <!-- Header Modal -->
+                                        <div class="modal-header">
+                                            <h5 class="text-xl font-semibold leading-normal text-gray-800" id="exampleModalScrollableLabel">Modal title</h5>
+                                            <button type="button"
+                                                class="btn-close box-content w-4 h-4 !pr-2.5 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+                                                data-bs-dismiss="modal" aria-label="Close">
+                                            </button>
+                                        </div>
+                                        <!-- Body Modal -->
+                                        <div class="modal-body relative p-4">
+                                            <p>This is a vertically centered modal.</p>
+                                        </div>
+                                        <!-- Footer Modal -->
+                                        <div class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 rounded-b-md gap-2 ">
+                                            <button type="button" class="rounded-button secondary-text-button" data-bs-dismiss="modal">
+                                                cancelar
+                                            </button>
+                                            <button type="button" class="rounded-button primary-text-button">
+                                                salvar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim Modal -->
+                        
+                        </div>
+                    </section>
+
+                    <section id="loja" class="flex flex-col gap-4 h-screen bg-neutral-lighter/50 px-16 py-8 snap-start snap-always">
+                        <h2 class="text-2xl font-semibold">Loja</h2>
+    
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet euismod lacus, at ullamcorper sem. Sed sed sapien et mi dignissim tempor. Fusce libero tortor, lacinia eget dolor vitae, laoreet laoreet mauris. Nam consequat arcu tincidunt metus sodales sagittis. Mauris commodo enim ac pharetra lacinia. Donec quis posuere dui. Nunc at risus ac tellus commodo dictum sit amet nec leo. Duis nisl ante, tristique eu scelerisque ut, sagittis non ante. Nullam quis justo facilisis lacus vestibulum congue. Praesent egestas lacus id pulvinar pretium.
+    
+                            </p>
+                            <p>Fusce ullamcorper eros nisl, sed ullamcorper tellus tristique et. Pellentesque sed turpis vel eros iaculis elementum eget eu magna. Quisque felis ante, venenatis et ullamcorper in, viverra eget velit. Donec consectetur nisl vitae libero tincidunt, id bibendum mi tempus. Integer tincidunt magna diam. Curabitur egestas sem eros. Nulla leo massa, mattis a ullamcorper et, lacinia eget eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut egestas urna nisi, et placerat augue eleifend in. Nam in lacus ut elit euismod placerat.
+        
+                            </p>
+                            <p>Cras non mauris ac nisl iaculis hendrerit non quis libero. Cras at pulvinar eros. Maecenas porta risus ut arcu laoreet, pulvinar consequat elit gravida. Duis pharetra, urna at pretium bibendum, nibh neque ornare ex, at sagittis augue dolor vitae leo. Praesent at magna varius, tincidunt libero nec, vestibulum leo. Praesent non hendrerit ligula. Quisque sollicitudin aliquam arcu. Donec vulputate elit at euismod commodo. Phasellus id justo sed turpis suscipit rhoncus eget ac magna. Nunc fringilla pellentesque velit sed mattis. Proin a ipsum condimentum, congue tellus ac, lobortis dui.
+        
+                            </p>
+                            <p>Fusce quis nunc et neque dictum suscipit. Cras et placerat est. Maecenas vel ligula congue, egestas felis a, pulvinar nisi. Sed et eros at nisi rutrum aliquet vitae a nisl. Integer scelerisque metus eu ipsum suscipit, quis sollicitudin augue laoreet. Suspendisse at risus bibendum, vestibulum odio aliquet, sollicitudin diam. Phasellus non erat massa. In egestas nunc sed nunc tempus, non fermentum ipsum bibendum. Proin tristique ullamcorper elit, ac hendrerit metus luctus in.
+        
+                            </p>
+    
+    
+                    </section>
+    
+                </main>
+
+            </div>
+
+
+        </div>
+    
+    <script src="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@main/node_modules/tw-elements/dist/js/index.min.js"></script>
+</body>
+
+<!-- Required popper.js -->
+<script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+<script>
+  var popoverTriggerList = [].slice.call(
+    document.querySelectorAll('[data-bs-toggle="popover"]')
+  );
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new Popover(popoverTriggerEl);
+  });
+</script>
+
+</html>

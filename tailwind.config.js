@@ -24,10 +24,18 @@ module.exports = {
         darker: "#1e2626",
       },
 
+      zinc: {
+        lighter: "#f5f5f5",
+        light: "#d4d4d4",
+        DEFAULT: "#737373",
+        dark: "#404040",
+        darker: "#171717",
+      },
+
       primary: {
         lighter: "#e8f2f3",
         light: "#95c2c6",
-        DEFAULT: "#187a81",
+        DEFAULT: "#197e85",
         dark: "#11575e",
         darker: "#0a3337",
       },
