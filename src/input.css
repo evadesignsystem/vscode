@@ -1,5 +1,14 @@
 @tailwind base;
+
+:focus {
+    @apply outline-none;
+}
+
 @tailwind components;
+
+:disabled {
+    @apply bg-neutral-lighter border-none;
+}
 
 /* MATERIAL SOLID */
 .material-symbols-sharp {
@@ -15,7 +24,7 @@
     @apply flex items-center py-2.5 px-5 rounded-xl inline-block;
 }
 .rounded-button {
-    @apply flex items-center py-2.5 px-5 rounded-full inline-block;
+    @apply flex items-center py-2.5 pl-4 pr-5 rounded-full inline-block;
 }
 .rounded-button-io {
     @apply flex items-center p-2.5 rounded-full inline-block;
@@ -25,6 +34,9 @@
 }
 .secondary-button{
     @apply bg-secondary text-white font-semibold antialiased hover:bg-secondary-dark hover:shadow-md hover:shadow-neutral-light active:bg-secondary-darker transition-all ease-in-out duration-300 ;
+}
+.info-button{
+    @apply bg-info text-white font-semibold antialiased hover:bg-info-dark hover:shadow-md hover:shadow-neutral-light active:bg-info-darker transition-all ease-in-out duration-300 ;
 }
 .primary-text-button{
     @apply bg-primary-lighter text-primary font-semibold antialiased hover:bg-primary-light/40 hover:text-primary-dark active:bg-primary active:text-white transition-all ease-out duration-200;
@@ -73,9 +85,6 @@
 }
 .datepicker-footer-btn, .datepicker-toggle-icon {
     @apply text-primary rounded-full ;
-}
-.datepicker-footer-btn:focus, .datepicker-footer-btn:hover {
-    /* @apply hover:bg-primary-light; */
 }
 .datepicker-clear-btn{
     @apply hidden;

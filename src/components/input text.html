@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <!-- <link rel="stylesheet" href="/dist/output.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@main/dist/output.css">
+    <link rel="stylesheet" href="/dist/output.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@main/dist/output.css"> -->
 </head>
-<body class="p-4 overflow-hidden">
+<body>
 
     <!-- Header -->
     <nav class="z-30 mb-4 bg-neutral-lighter shadow-sm shadow-neutral-light/50 transition-all ease-in-out sticky top-0">
@@ -26,17 +26,13 @@
     </nav>
     
     <!-- Content -->
-
-    <div class="flex flex-wrap gap-4 min-h-full w-full px-3">
-
-        <!-- Data Picker -->
-        <div class="flex items-center form-floating justify-center">
-            <div class="datepicker relative xl:w-96">
-              <input id="dp-floating" type="text" class="peer input-floating" placeholder="Selecione a data" />
-              <label for="dp-floating" class="label-floating">Selecione a data</label>
-            </div>
+    <div class="container mx-auto px-3 flex justify-center">
+        <!-- Input Text -->
+        <div class="w-72 relative">
+            <input id="email" type="text" class="peer input-floating" placeholder="e-mail"/>
+            <label for="email" class="label-floating">e-mail</label>
+            <span class="text-xs text-negative font-medium">Este é um texto de ajuda ao usuário.</span>
         </div>
-        
     </div>
 
 <script src="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@main/node_modules/tw-elements/dist/js/index.min.js"></script>

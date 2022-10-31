@@ -10,6 +10,11 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       
+      purple: colors.purple,
+      pink: colors.pink,
+      indigo: colors.indigo,
+      blue: colors.blue,
+      sky: colors.sky,
       
       ambient: {
         white: "#f5f5f5",

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <!-- <link rel="stylesheet" href="/dist/output.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@main/dist/output.css" />
+</head>
+<body>
+
+    <!-- Content -->
+    <div class="min-h-full w-full p-3">
+
+        <!-- Button Modal - Botão para a chamada do modal -->
+        <div class="mb-4 col-span-2">
+            <button type="button" class="rounded-button primary-button" data-mdb-ripple="true" data-mdb-ripple-color="light" data-bs-toggle="modal" data-bs-target="#modal-teste">
+                <i class="fa-solid fa-trash-can mr-3"></i>
+            primary button
+            </button>
+        </div>
+    
+        <!-- Modal -->
+        <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto backdrop-filter backdrop-blur" id="modal-teste" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none">
+                <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-2xl outline-none text-current">
+                    <!-- Header Modal -->
+                    <div class="modal-header">
+                        <h5 class="text-xl font-semibold leading-normal text-gray-800" id="exampleModalScrollableLabel">Modal title</h5>
+                        <button type="button"
+                            class="btn-close box-content w-4 h-4 !pr-2.5 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+                            data-bs-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <!-- Body Modal -->
+                    <div class="modal-body relative p-4">
+                        <p>This is a vertically centered modal.</p>
+                    </div>
+                    <!-- Footer Modal -->
+                    <div class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 rounded-b-md gap-2 ">
+                        <button type="button" class="rounded-button secondary-text-button" data-bs-dismiss="modal">
+                            cancelar
+                        </button>
+                        <button type="button" class="rounded-button primary-text-button">
+                            salvar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fim Modal -->
+        
+    </div>
+
+<script src="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@main/node_modules/tw-elements/dist/js/index.min.js"></script>    
+</body>
+</html>

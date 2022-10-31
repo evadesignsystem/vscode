@@ -11,17 +11,19 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <link rel="stylesheet" href="/dist/output.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@main/dist/output.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@latest/dist/output.css" /> -->
 </head>
 
-<body class="bg-white dark:bg-zinc-darker/95">
+<body class="bg-ambient-white dark:bg-zinc-darker/95 overflow-hidden">
     
-        <!-- MAIN -->
-        <div class="flex">
-            <!-- LEFT SIDEBAR -->
-            <main class="z-20 flex flex-col justify-between fixed h-screen w-16 xl:w-60 bg-[#fff] dark:bg-zinc-darker drop-shadow-xl transition-all ease-in-out">
+        <!-- MAIN // Conteúdo Global  -->
+        <div class="flex flex-row">
+
+            <!-- LEFT SIDEBAR // Barra Lateral Esquerda ( Logo / Menu / Usuário ) -->
+            <aside class="z-20 flex flex-col justify-between fixed h-screen w-16 xl:w-60 bg-white dark:bg-zinc-darker drop-shadow-xl transition-all ease-in-out">
+                
                 <!-- HEADER -->
-                <header class="flex flex-col">
+                <nav class="flex flex-col">
 
                         <!-- LOGO EVA -->
                         <span class="select-none justify-center items-center font-bold text-xl text-neutral-dark my-8 hidden xl:flex dark:text-white">
@@ -45,8 +47,8 @@
                                 <li>
                                     <a href="#distribuidoras" class="flex items-center justify-center xl:justify-start py-2 xl:px-4 text-sm text-neutral dark:text-white dark:hover:text-neutral-light font-semibold rounded-xl xl:active:bg-primary-lighter hover:text-neutral-dark"
                                         target="loading_content" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="distribuidoras">
-                                        <span class="material-symbols-sharp text-2xl xl:mr-3">warehouse</span>
-                                        <span class="hidden xl:block">Expedição</span>
+                                        <span class="material-symbols-sharp text-2xl xl:mr-3">database</span>
+                                        <span class="hidden xl:block">Consultas</span>
                                         <span class="material-symbols-sharp hidden xl:block text-2xl xl:ml-1">expand_more</span>
                                     </a>
 
@@ -54,14 +56,45 @@
                                         <a href="#"
                                             class="flex items-center justify-center xl:justify-start py-1 xl:ml-[50px] text-xs text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
                                             target="loading_content">
-                                            <span class="material-symbols-sharp text-xl xl:mr-1">home_pin</span>
-                                            <span class="hidden xl:block">BAHIA</span>
+                                            <span class="material-symbols-sharp text-xl xl:mr-2">barcode</span>
+                                            <span class="hidden xl:block">Boleto</span>
                                         </a>
                                         <a href="#"
                                             class="flex items-center justify-center xl:justify-start py-1 xl:ml-[50px] text-xs text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
                                             target="loading_content">
-                                            <span class="material-symbols-sharp text-xl xl:mr-1">home_pin</span>
-                                            <span class="hidden xl:block">PARÁ</span>
+                                            <span class="material-symbols-sharp text-xl xl:mr-2">vpn_key</span>
+                                            <span class="hidden xl:block">Serial</span>
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center justify-center xl:justify-start py-1 xl:ml-[50px] text-xs text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
+                                            target="loading_content">
+                                            <span class="material-symbols-sharp text-xl xl:mr-2">history</span>
+                                            <span class="hidden xl:block">Log</span>
+                                        </a>
+                                    </div>
+                                    
+                                </li>
+
+                                <li>
+                                    <a href="#integracoes" class="flex items-center justify-center xl:justify-start py-2 xl:px-4 text-sm text-neutral dark:text-white dark:hover:text-neutral-light font-semibold rounded-xl xl:active:bg-primary-lighter hover:text-neutral-dark"
+                                        target="loading_content" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="distribuidoras">
+                                        <span class="material-symbols-sharp text-2xl xl:mr-3">category</span>
+                                        <span class="hidden xl:block">Integrações</span>
+                                        <span class="material-symbols-sharp hidden xl:block text-2xl xl:ml-1">expand_more</span>
+                                    </a>
+
+                                    <div id="integracoes" class="hidden xl:block collapse"> <!-- .COLLAPSE necessária para "refresh page (f5)" com submenu fechado -->
+                                        <a href="#"
+                                            class="flex items-center justify-center xl:justify-start py-1 xl:ml-[50px] text-xs text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
+                                            target="loading_content">
+                                            <span class="material-symbols-sharp text-xl xl:mr-2">warehouse</span>
+                                            <span class="hidden xl:block">Fábricas</span>
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center justify-center xl:justify-start py-1 xl:ml-[50px] text-xs text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
+                                            target="loading_content">
+                                            <span class="material-symbols-sharp text-xl xl:mr-2">build</span>
+                                            <span class="hidden xl:block">Serviços</span>
                                         </a>
                                     </div>
                                     
@@ -82,36 +115,17 @@
                                     <a href="#" class="flex items-center justify-center xl:justify-start py-2 xl:px-4 text-sm text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
                                         target="loading_content">
                                         <span class="material-symbols-sharp text-2xl xl:mr-3">
-                                            barcode
-                                        </span>
-                                        <span class="hidden xl:block">Boleto</span>
-                                    </a>
-                                </li>
-        
-                                <li>
-                                    <a href="#" class="flex items-center justify-center xl:justify-start py-2 xl:px-4 text-sm text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
-                                        target="loading_content">
-                                        <span class="material-symbols-sharp text-2xl xl:mr-3">
                                             visibility
                                         </span>
                                         <span class="hidden xl:block">Manual Review</span>
                                     </a>
                                 </li>
         
-                                <li>
-                                    <a href="#" class="flex items-center justify-center xl:justify-start py-2 xl:px-4 text-sm text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
-                                        target="loading_content">
-                                        <span class="material-symbols-sharp text-2xl xl:mr-3">
-                                            store
-                                        </span>
-                                        <span class="hidden xl:block">Lojas</span>
-                                    </a>
-                                </li>
-        
                             </ul>
                         </nav>
 
-                </header>
+                </nav>
+                
                 <!-- USER CONFIGS / LOGOUT -->
                 <div class="flex flex-col items-center xl:w-60 pb-2.5 xl:pb-12 transition-all ease-out duration-200">
                     <div class="hidden xl:flex flex-col justify-center items-center mb-8">
@@ -123,87 +137,382 @@
                         <p class="text-xs font-medium antialiased text-neutral/80 dark:text-neutral-light">matheus.willian@wj.com.br</p>
                     </div>
                     <div class="flex flex-col xl:flex-row gap-4 xl:gap-8">
-                        <a href="#" class="xl:block xl:border border-neutral-light/80 rounded-xl xl:hover:bg-primary xl:hover:border-primary">
-                            <span class="material-symbols-sharp p-2 xl:hover:animate-spin text-neutral hover:text-neutral-dark xl:hover:text-white dark:text-white transition-colors">
-                                settings
-                            </span>
-                        </a>
+
                         <a href="#">
                             <span class="material-symbols-sharp p-2 xl:border border-neutral-light/80 rounded-xl text-neutral hover:text-neutral-dark xl:hover:bg-negative xl:hover:text-white hover:border-negative dark:text-white transition-colors">
                                 logout
                             </span>
-                        </a>    
+                        </a> 
+                        
+                        <span class="dropup">
+                            <a href="#" class="dropdown-toggle xl:block xl:border border-neutral-light/80 rounded-xl xl:hover:bg-primary xl:hover:border-primary" type="button"
+                                id="configs"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <span class="material-symbols-sharp p-2 xl:hover:animate-spin text-neutral hover:text-neutral-dark xl:hover:text-white dark:text-white transition-colors">
+                                    settings
+                                </span>
+                            </a>
+
+                            <!-- Dropdown AUT / BIN -->
+                            <ul class="dropdown-menu min-w-max relative hidden bg-white text-base z-50 float-left list-none text-left rounded-xl shadow-lg m-0 border-none" aria-labelledby="configs">
+                                <li>
+                                    <!-- Item Dropdown AUT -->
+                                    <a class="text-xs py-2 px-4 font-medium flex justify-start items-center w-fit whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-t-xl" href="#">
+                                        <span class="material-symbols-sharp text-lg mr-2">vpn_key</span>Alterar Senha
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <!-- Item Dropdown BIN -->
+                                    <a class="text-xs py-2 px-4 font-medium flex justify-start items-center w-full whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-b-xl" href="#">
+                                        <span class="material-symbols-sharp text-lg mr-2">dark_mode</span>Dark Mode
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </span>
+                           
                     </div>
                 </div>
-            </main>
-            <!-- RIGHT SIDEBAR -->
-            <!-- <nav class="w-[180px] bg-white shadow-sm shadow-neutral-light/50 sticky right-0 order-1">
-                <div class="mx-auto px-4">
-                    <div class="relative flex h-16 items-center justify-between">
 
-                        <h1 class="text-black">menu</h1>
-                    </div>
-                </div>
-            </nav> -->
+            </aside>
 
-            <!-- CONTENT -->
-            <div class="w-screen h-screen overflow-hidden">
+            <!-- CONTENT // Parte Central da Aplicação -->
+            <main class="ml-16 xl:ml-60 transition-all ease-in-out bg-neutral-lighter/10">
 
-                <nav class="w-full ml-16 xl:ml-60 z-10 bg-neutral-lighter shadow-sm shadow-neutral-light/50 transition-all ease-in-out sticky top-0">
-                    <div class="mx-auto px-4">
-                        <div class="relative flex h-16 items-center justify-between">
+                <header>
+                    <!-- TOP // Sticky Superior ( Pesquisa / Outros ) -->
+                    <nav class="sticky top-0 px-4 flex justify-between min-w-[1234px] w-[calc(100vmax-64px)] xl:w-[calc(100vmax-240px)] bg-primary shadow-sm shadow-neutral-light/50">
+                        <div class="flex items-center px-4 h-16 relative gap-4">
+                            
+                            <ul class="flex gap-4 items-center h-[42px]">
 
-                            <ul class="navbar-nav flex pl-0 list-style-none mr-auto">
-                                <li class="p-2">
-                                  <a class="text-neutral hover:text-neutral-darker rounded-full" href="#atendimento">Atendimento</a>
-                                </li>
-                                <li class="p-2">
-                                    <a class="text-neutral hover:text-neutral-darker p-0" href="#localizacao">Localização</a>
-                                </li>
-                                <li class="nav-item p-2">
-                                    <a class="text-neutral hover:text-neutral-darker p-0" href="#loja">Loja</a>
+                                <li>
+                                    <!-- Search Field -->
+                                    <div class="w-28 focus-within:w-56 relative transition-all ease-in-out">
+                                        <input id="pesquisar" type="text" class="input-floating focus-within:pr-11 pl-5 pr-10 rounded-full" placeholder="search" />
+                                        <span class="material-symbols-sharp absolute text-2xl right-2.5 top-1.5 text-primary"><a href="#">search</a></span>
+                                    </div>
+
                                 </li>
 
-                                <li class="px-4 rounded-full text-neutral-dark bg-neutral-light/50 font-semibold text-sm flex justify-center items-center cursor-pointer active:bg-gray-300 transition duration-300 ease">
-                                    <a class="text-neutral hover:text-neutral-darker p-0" href="#boleto">Boleto</a>
+                                <li>
+                                    <!-- Button Refresh --> 
+                                    <a href="" class="flex items-center text-primary-light hover:text-white">
+                                        <span class="material-symbols-sharp mr-1">refresh</span>Atualizar
+                                    </a>
+
+                                </li>
+                                
+                                <li> 
+                                    <!-- Button Info -->
+                                    <a href="" class="flex items-center text-primary-light hover:text-white " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="material-symbols-sharp mr-1">contact_support</span>Info
+                                    </a>
+
+                                    <!-- Dropdown AUT / BIN -->
+                                    <ul class="dropdown-menu min-w-max relative hidden bg-white text-base z-50 float-left list-none text-left rounded-xl shadow-lg mt-1 m-0 border-none" aria-labelledby="dropdownMenuButton1">
+                                        <li>
+                                            <!-- Item Dropdown AUT -->
+                                            <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-fit whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-t-xl" href="#">
+                                                <span class="material-symbols-sharp text-lg mr-2">key</span>AUT
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <!-- Item Dropdown BIN -->
+                                            <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-full whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-b-xl" href="#">
+                                                <span class="material-symbols-sharp text-lg mr-2">pin</span>BIN
+                                            </a>
+                                        </li>
+
+                                    </ul>
                                 </li>
 
-                            </ul>   
-
+                            </ul>                     
+                                                    
                         </div>
-                    </div>
-                </nav>
+                        <div class="flex items-center px-4 h-16 relative gap-3">
+                            
+                            <div class="flex gap-4">
+                                <!-- Tasks -->
+                                <a href="" class="flex items-center text-primary-light hover:text-white">
+                                    <span class="material-symbols-sharp mr-1">sms</span> Chamados
+                                </a>
 
-                <main class="ml-16 xl:ml-60 fixed h-[calc(100vh-64px)] snap-mandatory snap-y overflow-y-scroll scroll-smooth">
+                                <!-- Notifications -->
+                                <a href="" class="flex items-center text-primary-light hover:text-white">
+                                    <span class="material-symbols-sharp mr-1">notifications</span> Notificações
+                                </a>
+
+                            </div>
+                    
     
-                    <section id="atendimento" class="flex flex-col gap-4 h-screen bg-neutral-lighter/50 px-16 py-8 snap-start snap-always antialiased">
-                        <h2 class="text-2xl font-semibold">Atendimento</h2>
+                        </div>
+                    </nav>
+                    
+                    <!-- NAVIGATION // Sticky Inferior ( Navegação Interna ) -->
+                    <nav class="-z-10 fixed min-w-[1234px] w-[calc(100vmax-64px)] xl:w-[calc(100vmax-240px)] bg-white">
+                        <div class="flex items-center justify-center h-16">
+
+                            <!-- LINKS // Âncoras -->
+                            <ul class="flex gap-2 font-medium">
+                                <li>
+                                    <a class="text-white bg-primary rounded-full px-4 py-2" href="#atendimento">Atendimento</a>
+                                </li>
+                                <li>
+                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#localizacao">Localização</a>
+                                </li>
+                                <li active>
+                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#loja">Loja</a>
+                                </li>
+                                <li>
+                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#notafiscal">Nota Fiscal</a>
+                                </li>
+                                <li>
+                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#entrega">Entrega</a>
+                                </li>
+                                <li>
+                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#fotos">Fotos</a>
+                                </li>
+                                <li>
+                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#serial">Serial</a>
+                                </li>
+                                <li>
+                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#json">JSON</a>
+                                </li>
+                                <li>
+                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#slots">Slots</a>
+                                </li>
+                            </ul>
+                        </div>                 
+                    </nav>
+
+                </header>
+
+                <!-- ONEPAGE CONTENT // Conteúdo da Página Selecionada ( Todas as Seções da Página ) -->
+                <main class="-z-20 mt-16 fixed min-w-[1234px] h-[calc(100vh-64px)] snap-mandatory snap-y overflow-y-scroll scroll-mt-16 scroll-smooth drop-shadow-xl">
+                    
+                    <section id="atendimento" class="flex justify-start flex-wrap w-fit min-w-[1264px] gap-4 h-fit px-4 py-8 snap-start snap-always mx-auto">
+                        
+                        <div class="column01 flex flex-col gap-4">
+                            <article class="flex flex-col h-fit w-72 py-4 px-4 bg-gradient-to-bl from-sky-400 to-info rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header class="h-fit w-full flex justify-between dropend">
+                                    <div class="flex items-center select-none">
+                                        <span class="material-symbols-sharp text-neutral-dark mr-2">
+                                            badge
+                                        </span>
+                                        <span class="text-xs font-semibold text-neutral-dark">Proprietário</span>
+                                    </div>
+                                    <span class="material-symbols-sharp text-neutral-dark dropdown-toggle" type="button" id="editCard" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="hover:bg-secondary-lighter/30 rounded-full px-1.5 py-1 h-fit transition">more_horiz</a>
+                                    </span>
+                                    <ul class="dropdown-menu min-w-max relative hidden bg-white text-base z-50 float-left list-none text-left rounded-xl shadow-lg mt-1 m-0 border-none" aria-labelledby="editCard">
+                                        <li>
+                                            <!-- Item Dropdown AUT -->
+                                            <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-fit whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-t-xl" href="#">
+                                                <span class="material-symbols-sharp text-lg mr-2">key</span>AUT
+                                            </a>
+                                        </li>
     
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet euismod lacus, at ullamcorper sem. Sed sed sapien et mi dignissim tempor. Fusce libero tortor, lacinia eget dolor vitae, laoreet laoreet mauris. Nam consequat arcu tincidunt metus sodales sagittis. Mauris commodo enim ac pharetra lacinia. Donec quis posuere dui. Nunc at risus ac tellus commodo dictum sit amet nec leo. Duis nisl ante, tristique eu scelerisque ut, sagittis non ante. Nullam quis justo facilisis lacus vestibulum congue. Praesent egestas lacus id pulvinar pretium.
+                                        <li>
+                                            <!-- Item Dropdown BIN -->
+                                            <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-full whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-b-xl" href="#">
+                                                <span class="material-symbols-sharp text-lg mr-2">pin</span>BIN
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </header>
     
-                            </p>
-                            <p>Fusce ullamcorper eros nisl, sed ullamcorper tellus tristique et. Pellentesque sed turpis vel eros iaculis elementum eget eu magna. Quisque felis ante, venenatis et ullamcorper in, viverra eget velit. Donec consectetur nisl vitae libero tincidunt, id bibendum mi tempus. Integer tincidunt magna diam. Curabitur egestas sem eros. Nulla leo massa, mattis a ullamcorper et, lacinia eget eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut egestas urna nisi, et placerat augue eleifend in. Nam in lacus ut elit euismod placerat.
-        
-                            </p>
-                            <p>Cras non mauris ac nisl iaculis hendrerit non quis libero. Cras at pulvinar eros. Maecenas porta risus ut arcu laoreet, pulvinar consequat elit gravida. Duis pharetra, urna at pretium bibendum, nibh neque ornare ex, at sagittis augue dolor vitae leo. Praesent at magna varius, tincidunt libero nec, vestibulum leo. Praesent non hendrerit ligula. Quisque sollicitudin aliquam arcu. Donec vulputate elit at euismod commodo. Phasellus id justo sed turpis suscipit rhoncus eget ac magna. Nunc fringilla pellentesque velit sed mattis. Proin a ipsum condimentum, congue tellus ac, lobortis dui.
-        
-                            </p>
-                            <p>Fusce quis nunc et neque dictum suscipit. Cras et placerat est. Maecenas vel ligula congue, egestas felis a, pulvinar nisi. Sed et eros at nisi rutrum aliquet vitae a nisl. Integer scelerisque metus eu ipsum suscipit, quis sollicitudin augue laoreet. Suspendisse at risus bibendum, vestibulum odio aliquet, sollicitudin diam. Phasellus non erat massa. In egestas nunc sed nunc tempus, non fermentum ipsum bibendum. Proin tristique ullamcorper elit, ac hendrerit metus luctus in.
-        
-                            </p>
+                                <main class="pt-4">
     
+                                    <div class="mb-2">
+                                        <h6 contenteditable="true" class="font-medium leading-tight text-base mt-0 text-white">Anderson Dias de Oliveira</h6>
+                                        <span class="bg-white/30 text-white text-xs w-fit px-2 py-0.5 rounded-full mr-1 select-none">cpf</span>
+                                        <span contenteditable="true">031.685.337-26</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <p class="text-xs text-white bg-info-dark w-fit px-2 py-0.5 rounded-full">andersonado@gmail.com</p>
+                                        <p class="text-sm text-white"><span>(27)</span> 98118-5756</p>
+                                    </div>
     
+                                </main>
+                                <footer>
+                                    <!-- <div>
+                                        <button type="button" class="square-button primary-button w-" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                            secondary button
+                                        </button>
+                                    </div> -->
+                                </footer>
+                            </article>
+    
+                            <article class="flex h-48 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header>
+    
+                                </header>
+                                <main></main>
+                                <footer></footer>
+                            </article>
+    
+                            <article class="flex h-64 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header>teste</header>
+                                <main></main>
+                                <footer></footer>
+                            </article>
+                        </div>
+
+                        <div class="column02 flex flex-col gap-4">
+                            <article class="flex flex-col h-fit w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header class="h-fit w-full flex justify-between">
+                                    <div class="flex items-center select-none">
+                                        <span class="material-symbols-sharp text-neutral-dark mr-2">
+                                            store
+                                        </span>
+                                        <span class="text-xs font-semibold text-neutral-dark">Loja</span>
+                                    </div>
+                                    <span class="material-symbols-sharp" type="button" id="editVeiculo" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">more_horiz</a>
+                                    </span>
+                                    <ul class="dropdown-menu min-w-max relative hidden bg-white text-base z-50 float-left list-none text-left rounded-xl shadow-lg mt-1 m-0 border-none" aria-labelledby="editVeiculo">
+                                        <li>
+                                            <!-- Item Dropdown AUT -->
+                                            <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-fit whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-t-xl" href="#">
+                                                <span class="material-symbols-sharp text-lg mr-2">key</span>AUT
+                                            </a>
+                                        </li>
+    
+                                        <li>
+                                            <!-- Item Dropdown BIN -->
+                                            <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-full whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-b-xl" href="#">
+                                                <span class="material-symbols-sharp text-lg mr-2">pin</span>BIN
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </header>
+    
+                                <main class="pt-4">
+    
+                                    <div class="mb-2">
+                                        <h6 contenteditable="true" class="font-semibold leading-tight text-base mt-0 text-primary capitalize">DISPLAKK INDUSTRIA E COMERCIO DE PLACAS EIRELI</h6>
+                                        <p class="text-sm text-neutral"><span>(27)</span> 98118-5756</p>
+                                        <!-- <h6 contenteditable="true" class="font-semibold leading-tight text-base mt-0 mb-1 text-neutral">
+                                            <span class="bg-neutral-light/30 text-xs w-fit px-2 py-0.5 rounded-full mr-1">CNPJ</span>10.271.713/0007-39</h6> -->
+                                    </div>
+                                    <!-- CNPJ -->
+                                    <div class="w-full relative mt-4" disabled>
+                                        <input disabled  id="CNPJ" type="text" class="peer input-floating" placeholder="CNPJ" value="10.271.713/0007-39"/>
+                                        <label for="CNPJ" class="label-floating">CNPJ</label>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="w-full relative mt-4" disabled>
+                                        <input disabled  id="Email" type="text" class="peer input-floating" placeholder="Email" value="displak.viana@hotmail.com"/>
+                                        <label for="CNPJ" class="label-floating">Email</label>
+                                    </div>                               
+    
+                                </main>
+                                <footer>
+                                    
+                                </footer>
+                            </article>
+    
+                            <article class="flex h-48 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header>
+    
+                                </header>
+                                <main></main>
+                                <footer></footer>
+                            </article>
+    
+                            <article class="flex h-64 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header>teste</header>
+                                <main></main>
+                                <footer></footer>
+                            </article>
+                        </div>
+
+                        <div class="column04 flex flex-col gap-4">
+                            <article class="flex flex-col h-fit w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header class="h-fit w-full flex justify-between">
+                                    <div class="flex items-center select-none">
+                                        <span class="material-symbols-sharp text-neutral mr-2">
+                                            directions_car
+                                        </span>
+                                        <span class="text-sm font-semibold text-neutral">Carro</span>
+                                    </div>
+                                    <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">more_horiz</a>
+                                    </span>
+                                </header>
+    
+                                <main class="pt-4">
+    
+                                    <div class="">
+
+                                        <h6 contenteditable="true" class="font-semibold leading-tight text-base mt-0 mb-1 text-primary">I/CHEV CRUZE LTZ NB AT /PRATA</h6>
+                                        <span class="bg-neutral-light/30 text-xs w-fit px-2 py-0.5 rounded-full mr-1 select-none">renavam</span>
+                                        <span contenteditable="true">10008089</span>
+                                        <!-- Input Text -->
+                                        <div class="w-full relative mt-4">
+                                            <input disabled id="categoria" type="text" class="peer input-floating" placeholder="Categoria" value="Particular/Preto"/>
+                                            <label for="categoria" class="label-floating">Categoria</label>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </main>
+                                <footer>
+                                    
+                                </footer>
+                            </article>
+    
+                            <article class="flex h-48 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header>
+    
+                                </header>
+                                <main></main>
+                                <footer></footer>
+                            </article>
+    
+                            <article class="flex h-64 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header>teste</header>
+                                <main></main>
+                                <footer></footer>
+                            </article>
+                        </div>
+
+                        <div class="column04 flex flex-col gap-4">
+                                
+                            <article class="flex h-48 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header>
+    
+                                </header>
+                                <main></main>
+                                <footer></footer>
+                            </article>
+    
+                            <article class="flex h-96 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header>teste</header>
+                                <main></main>
+                                <footer></footer>
+                            </article>
+                        </div>
+
+                       
+
                     </section>
     
-                    <section id="localizacao" class="flex flex-col h-screen bg-white px-16 py-8 snap-start snap-always">
+                    <section id="localizacao" class="flex flex-col gap-4 h-full bg-white px-16 py-8 snap-start snap-always">
                         <h2 class="text-2xl font-semibold mb-8">Localização</h2>
     
                         <div class="flex flex-wrap gap-4">
     
                             <!-- Input Text -->
                             <div class="w-72 relative">
-                                <input id="username" type="text" class="peer input-floating" placeholder="Username"/>
-                                <label for="username" class="label-floating">Username</label>
+                                <input id="" type="text" class="peer input-floating" placeholder="Username"/>
+                                <label for="" class="label-floating">Username</label>
                             </div>
                             
                             <!-- Input Password -->
@@ -229,7 +538,8 @@
                         
                             <div class="mb-4 col-span-2">
                                 <button type="button" class="rounded-button primary-button" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                                    <i class="fa-solid fa-trash-can mr-3"></i>
+                                    <!-- <i class="fa-solid fa-trash-can mr-3"></i> -->
+                                    <span class="material-symbols-sharp mr-2">contact_support</span>
                                     primary button
                                 </button>
                             </div>
@@ -253,41 +563,11 @@
                                 primary button
                                 </button>
                             </div>
-                        
-                            <!-- Modal -->
-                            <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto backdrop-filter backdrop-blur" id="modal-teste" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
-                                <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none">
-                                    <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-2xl outline-none text-current">
-                                        <!-- Header Modal -->
-                                        <div class="modal-header">
-                                            <h5 class="text-xl font-semibold leading-normal text-gray-800" id="exampleModalScrollableLabel">Modal title</h5>
-                                            <button type="button"
-                                                class="btn-close box-content w-4 h-4 !pr-2.5 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
-                                                data-bs-dismiss="modal" aria-label="Close">
-                                            </button>
-                                        </div>
-                                        <!-- Body Modal -->
-                                        <div class="modal-body relative p-4">
-                                            <p>This is a vertically centered modal.</p>
-                                        </div>
-                                        <!-- Footer Modal -->
-                                        <div class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 rounded-b-md gap-2 ">
-                                            <button type="button" class="rounded-button secondary-text-button" data-bs-dismiss="modal">
-                                                cancelar
-                                            </button>
-                                            <button type="button" class="rounded-button primary-text-button">
-                                                salvar
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Fim Modal -->
-                        
+    
                         </div>
                     </section>
 
-                    <section id="loja" class="flex flex-col gap-4 h-screen bg-neutral-lighter/50 px-16 py-8 snap-start snap-always">
+                    <section id="loja" class="flex flex-col gap-4 h-full bg-white px-16 py-8 snap-start snap-always">
                         <h2 class="text-2xl font-semibold">Loja</h2>
     
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet euismod lacus, at ullamcorper sem. Sed sed sapien et mi dignissim tempor. Fusce libero tortor, lacinia eget dolor vitae, laoreet laoreet mauris. Nam consequat arcu tincidunt metus sodales sagittis. Mauris commodo enim ac pharetra lacinia. Donec quis posuere dui. Nunc at risus ac tellus commodo dictum sit amet nec leo. Duis nisl ante, tristique eu scelerisque ut, sagittis non ante. Nullam quis justo facilisis lacus vestibulum congue. Praesent egestas lacus id pulvinar pretium.
@@ -307,12 +587,43 @@
                     </section>
     
                 </main>
-
-            </div>
-
-
+                
+            </main>
+            
         </div>
-    
+        
+
+        <!-- Modal -->
+        <div class="modal fade bg-neutral/50 fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="modal-teste" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none transition-all">
+                <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-2xl outline-none text-current">
+                    <!-- Header Modal -->
+                    <div class="modal-header">
+                        <h5 class="text-xl font-semibold leading-normal text-neutral-dark" id="exampleModalScrollableLabel">Modal title</h5>
+                        <!-- <button type="button"
+                            class="btn-close box-content w-4 h-4 !pr-2.5 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+                            data-bs-dismiss="modal" aria-label="Close">
+                        </button> -->
+                    </div>
+                    <!-- Body Modal -->
+                    <div class="modal-body relative p-4 z-50">
+                        <p>This is a vertically centered modal.</p>
+                    </div>
+                    <!-- Footer Modal -->
+                    <div class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 rounded-b-md gap-2 ">
+                        <button type="button" class="rounded-button secondary-text-button" data-bs-dismiss="modal">
+                            cancelar
+                        </button>
+                        <button type="button" class="rounded-button primary-text-button">
+                            salvar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fim Modal -->
+
+
     <script src="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@main/node_modules/tw-elements/dist/js/index.min.js"></script>
 </body>
 
