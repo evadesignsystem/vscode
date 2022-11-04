@@ -27,8 +27,8 @@
 
                         <!-- LOGO EVA -->
                         <span class="select-none justify-center items-center font-bold text-xl text-neutral-dark my-8 hidden xl:flex dark:text-white">
-                            <img class="h-5 xl:w-16 xl:h-6 xl:mr-2" src="/src/img/newlogo-eva.svg" alt="">
-                            <span class="xl:flex">suporte</span>
+                            <img class="xl:w-32 xl:mr-2"  src="/src/img/logon-eva.png" alt="">
+                            <!-- <span class="xl:flex">suporte</span> -->
                         </span>
 
                         <!-- MENU PRINCIPAL -->
@@ -183,6 +183,7 @@
             <main class="ml-16 xl:ml-60 transition-all ease-in-out bg-neutral-lighter/10">
 
                 <header>
+
                     <!-- TOP // Sticky Superior ( Pesquisa / Outros ) -->
                     <nav class="sticky top-0 px-4 flex justify-between min-w-[1234px] w-[calc(100vmax-64px)] xl:w-[calc(100vmax-240px)] bg-primary shadow-sm shadow-neutral-light/50">
                         <div class="flex items-center px-4 h-16 relative gap-4">
@@ -293,23 +294,228 @@
                 </header>
 
                 <!-- ONEPAGE CONTENT // Conteúdo da Página Selecionada ( Todas as Seções da Página ) -->
-                <main class="-z-20 mt-16 fixed min-w-[1234px] h-[calc(100vh-64px)] snap-mandatory snap-y overflow-y-scroll scroll-mt-16 scroll-smooth drop-shadow-xl">
+                <main class="-z-20 mt-16 fixed min-w-[1234px] h-[calc(100vh-128px)] snap-mandatory snap-y overflow-y-scroll scroll-smooth">
                     
-                    <section id="atendimento" class="flex justify-start flex-wrap w-fit min-w-[1264px] gap-4 h-fit px-4 py-8 snap-start snap-always mx-auto">
+                    <section id="atendimento" class="h-full w-[1366px] min-w-[1264px] px-4 py-6 snap-start snap-always mx-auto">
                         
-                        <div class="column01 flex flex-col gap-4">
-                            <article class="flex flex-col h-fit w-72 py-4 px-4 bg-gradient-to-bl from-sky-400 to-info rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                        <div class="grid grid-cols-8 gap-4 h-auto">
+
+                            <!-- CARD OS -->
+                            <article class="col-span-6 row-span-2 h-full p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header class="h-fit w-full flex justify-between">
+                                    <div class="flex items-center select-none">
+                                        <span class="material-symbols-sharp text-neutral-dark mr-2">
+                                            work
+                                        </span>
+                                        <span class="text-sm font-semibold text-neutral-dark">OS</span>
+                                    </div>
+                                    <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="text-positive hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
+                                    </span>
+                                </header>
+    
+                                <main class="pt-4">
+                                    <div class="grid grid-cols-12 gap-6">
+
+                                        <!-- Número de Autorização -->
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Renavam" value="210801042523545"/>
+                                            <label for="" class="label-floating">Nº Autorização</label>
+                                        </div>
+
+                                        <!-- Loja Vinculada -->
+                                        <div class="col-span-9 relative">
+                                            <input disabled id="" type="text" class="peer input-floating" placeholder="Loja Vinculada" value="DISPLAKK INDUSTRIA E COMERCIO DE PLACAS EIRELI"/>
+                                            <label for="" class="label-floating">Loja Vinculada</label>
+                                        </div>
+
+                                        <!-- Criado Por -->
+                                        <div class="col-span-6 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Criado Por" value="VITOR RIBEIRO BARBOSA"/>
+                                            <label for="" class="label-floating">Criado Por</label>
+                                        </div>
+
+                                        <!-- Data da Criação -->
+                                        <div class="col-span-3 form-floating">
+                                            <div class="datepicker form-outline relative" data-mdb-toggle-button="false">
+                                                <input disabled id="dp-floating" type="text" class="peer input-floating" data-mdb-toggle="datepicker" placeholder="Data Criação" value="11/11/2021 10:02:23" />
+                                                <label for="dp-floating" class="label-floating">Data Criação</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Data do Protocolo -->
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Protocolo" value="11/11/2021 10:02:23"/>
+                                            <label for="" class="label-floating">Data Protocolo</label>
+                                        </div>
+              
+                                        <!-- Alterado Por -->
+                                        <div class="col-span-6 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Alterado Por" value="DISPLAK - SHOPPING MONTSERRAT"/>
+                                            <label for="" class="label-floating">Alterado Por</label>
+                                        </div>
+
+                                        <!-- Última Atualização -->
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Última Autalização" value="11/11/2021 10:03:47"/>
+                                            <label for="" class="label-floating">Última Autalização</label>
+                                        </div>
+
+                                        <hr class="col-span-12 my-4 text-neutral-lighter">
+
+                                        <!-- Descarte das Placas -->
+                                        <div class="col-span-2 relative">
+                                            <select disabled id="descartePlacas" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Descarte">
+                                                <option value="1">Sim</option>
+                                                <option selected value="2">Não</option>
+                                            </select>
+                                            <label for="descartePlacas" class="label-floating">Descarte</label>
+                                        </div>
+
+                                        <!-- Procuração -->
+                                        <div class="col-span-2 relative">
+                                            <select disabled id="procuracao" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Procuração">
+                                                <option value="1">Sim</option>
+                                                <option selected value="2">Não</option>
+                                            </select>
+                                            <label for="procuracao" class="label-floating">Procuração</label>
+                                        </div>
+
+                                        <!-- Nome do Cliente -->
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Nome do Cliente" value="Balcão"/>
+                                            <label for="" class="label-floating">Nome do Cliente</label>
+                                        </div>
+
+                                        <!-- Valor -->
+                                        <div class="col-span-2 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Valor" value="R$ 105,00"/>
+                                            <label for="" class="label-floating">Valor</label>
+                                        </div>
+
+                                        <!-- Forma de Pagamento -->
+                                        <div class="col-span-3 relative">
+                                            <select disabled id="formaPagamento" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Forma de Pagamento">
+                                                <option value="1">Boleto</option>
+                                                <option value="2">Dinheiro</option>
+                                                <option value="3">Cartão de Crédito</option>
+                                                <option value="4">Cartão de Débito</option>
+                                                <option value="5">Contra Apresentação</option>
+                                                <option value="6">Cartão Web</option>
+                                                <option value="7">Account Money</option>
+                                                <option value="8">Transferência</option>
+                                                <option selected value="9">Pix</option>
+                                            </select>
+                                            <label for="formaPagamento" class="label-floating">Forma de Pagamento</label>
+                                        </div>
+
+                                        <!-- Quantidade de Placas -->
+                                        <div class="col-span-2 relative">
+                                            <select disabled id="" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Qtd Placas">
+                                                <option value="0">0</option>
+                                                <option selected value="1">01</option>
+                                                <option value="2">02</option>
+                                                <option value="3">03</option>
+                                            </select>
+                                            <label for="" class="label-floating">Qtd Placas</label>
+                                        </div>
+
+                                        <!-- Fase -->
+                                        <div class="col-span-2 relative">
+                                            <select disabled id="fase" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Fase">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option selected value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                            </select>
+                                            <label for="fase" class="label-floating">Fase</label>
+                                        </div>
+
+                                        <!-- SubFase -->
+                                        <div class="col-span-2 relative">
+                                            <select disabled id="" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Subfase">
+                                                <option selected value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                            </select>
+                                            <label for="" class="label-floating">Subfase</label>
+                                        </div>
+
+                                        <!-- Situação -->
+                                        <div class="col-span-2 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Situação" value="0"/>
+                                            <label for="" class="label-floating">Situação</label>
+                                        </div>
+
+                                        <!-- Envio DETRAN -->
+                                        <div class="col-span-2 relative">
+                                            <select disabled id="" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Envio Detran">
+                                                <option selected value="0">0</option>
+                                                <option value="1">01</option>
+                                                <option value="2">02</option>
+                                                <option value="3">03</option>
+                                            </select>
+                                            <label for="" class="label-floating">Envio Detran</label>
+                                        </div>
+
+                                        <!-- Foto Pendente -->
+                                        <div class="col-span-2 relative">
+                                            <select disabled id="" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Foto Pendente">
+                                                <option value="0">0</option>
+                                                <option selected value="1">Sim</option>
+                                                <option value="2">Não</option>
+                                            </select>
+                                            <label for="" class="label-floating">Foto Pendente</label>
+                                        </div>
+
+                                        <!-- Data Envio Detran -->
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Envio Detran" value="16/02/2022 15:38:22"/>
+                                            <label for="" class="label-floating">Data Envio Detran</label>
+                                        </div>
+
+                                        <!-- ABA SLOTS MIGROU PARA ATENDIMENTO -->
+
+                                        <!-- Data do Agendamento -->
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Agendamento" value=" "/>
+                                            <label for="" class="label-floating">Data Agendamento</label>
+                                        </div>
+
+                                        <!-- Horário Agendado -->
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Horário Agendado" value=" "/>
+                                            <label for="" class="label-floating">Horário Agendado</label>
+                                        </div>
+
+                                    </div>
+                                    
+                                </main>
+                                <footer>
+                                    
+                                </footer>
+                            </article>
+
+                            <!-- CARD PROPRIETÁRIO -->
+                            <article class="col-span-2 h-fit py-4 px-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
                                 <header class="h-fit w-full flex justify-between dropend">
                                     <div class="flex items-center select-none">
                                         <span class="material-symbols-sharp text-neutral-dark mr-2">
-                                            badge
+                                            account_circle
                                         </span>
-                                        <span class="text-xs font-semibold text-neutral-dark">Proprietário</span>
+                                        <span class="text-sm font-semibold text-neutral-dark">PROPRIETÁRIO</span>
                                     </div>
-                                    <span class="material-symbols-sharp text-neutral-dark dropdown-toggle" type="button" id="editCard" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="material-symbols-sharp text-neutral-dark dropdown-toggle" type="button" id="ditCard" data-bs-toggle="dropdown" aria-expanded="false">
                                         <a href="#" class="hover:bg-secondary-lighter/30 rounded-full px-1.5 py-1 h-fit transition">more_horiz</a>
                                     </span>
-                                    <ul class="dropdown-menu min-w-max relative hidden bg-white text-base z-50 float-left list-none text-left rounded-xl shadow-lg mt-1 m-0 border-none" aria-labelledby="editCard">
+                                    <ul class="dropdown-menu min-w-max relative hidden bg-white text-base z-50 float-left list-none text-left rounded-xl shadow-lg mt-1 m-0 border-none" aria-labelledby="ditCard">
                                         <li>
                                             <!-- Item Dropdown AUT -->
                                             <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-fit whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-t-xl" href="#">
@@ -328,16 +534,30 @@
     
                                 <main class="pt-4">
     
-                                    <div class="mb-2">
-                                        <h6 contenteditable="true" class="font-medium leading-tight text-base mt-0 text-white">Anderson Dias de Oliveira</h6>
-                                        <span class="bg-white/30 text-white text-xs w-fit px-2 py-0.5 rounded-full mr-1 select-none">cpf</span>
-                                        <span contenteditable="true">031.685.337-26</span>
+                                    <div class="grid grid-cols-2 gap-6">
+
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Nome" value="ANDERSON DIAS DE OLIVEIRA"/>
+                                            <label for="" class="label-floating">Nome</label>
+                                        </div>
+
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="CPF" value="031.685.337-26"/>
+                                            <label for="" class="label-floating">CPF</label>
+                                        </div>
+
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Email" value="andersonado@gmail.com"/>
+                                            <label for="" class="label-floating">Email</label>
+                                        </div>
+
+                                        <div class="relative col-span-2">
+                                            <input disabled id="" type="text" class="peer input-floating" placeholder="Telefone" value="(27) 98118-5756"/>
+                                            <label for="" class="label-floating">Telefone</label>
+                                        </div>
+
                                     </div>
-                                    <div class="mb-2">
-                                        <p class="text-xs text-white bg-info-dark w-fit px-2 py-0.5 rounded-full">andersonado@gmail.com</p>
-                                        <p class="text-sm text-white"><span>(27)</span> 98118-5756</p>
-                                    </div>
-    
+                                        
                                 </main>
                                 <footer>
                                     <!-- <div>
@@ -347,35 +567,115 @@
                                     </div> -->
                                 </footer>
                             </article>
-    
-                            <article class="flex h-48 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
-                                <header>
-    
-                                </header>
-                                <main></main>
-                                <footer></footer>
-                            </article>
-    
-                            <article class="flex h-64 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
-                                <header>teste</header>
-                                <main></main>
-                                <footer></footer>
-                            </article>
-                        </div>
 
-                        <div class="column02 flex flex-col gap-4">
-                            <article class="flex flex-col h-fit w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                            <!-- CARD SERIAL -->
+                            <article class="col-span-2 h-full p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
                                 <header class="h-fit w-full flex justify-between">
                                     <div class="flex items-center select-none">
                                         <span class="material-symbols-sharp text-neutral-dark mr-2">
-                                            store
+                                            qr_code_2
                                         </span>
-                                        <span class="text-xs font-semibold text-neutral-dark">Loja</span>
+                                        <span class="text-sm font-semibold text-neutral-dark">SERIAL</span>
                                     </div>
-                                    <span class="material-symbols-sharp" type="button" id="editVeiculo" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
                                         <a href="#" class="hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">more_horiz</a>
                                     </span>
-                                    <ul class="dropdown-menu min-w-max relative hidden bg-white text-base z-50 float-left list-none text-left rounded-xl shadow-lg mt-1 m-0 border-none" aria-labelledby="editVeiculo">
+                                </header>
+    
+                                <main class="pt-4">
+    
+                                    <div class="grid grid-cols-3 gap-6">
+                                                                                
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Serial 01" value="210801042523546"/>
+                                            <label for="" class="label-floating">Serial 01</label>
+                                        </div>
+
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Serial 02" value="210801042523545"/>
+                                            <label for="" class="label-floating">Serial 02</label>
+                                        </div>
+
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Serial 03" value="null"/>
+                                            <label for="" class="label-floating">Serial 03</label>
+                                        </div>
+
+                                    </div>
+                                    
+                                </main>
+
+                                <footer>
+
+                                    
+                                    
+                                </footer>
+                            </article>
+
+                            <!-- CARD INSTALAÇÃO -->
+                            <article class="col-span-4 h-full p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header class="h-fit w-full flex justify-between">
+                                    <div class="flex items-center select-none">
+                                        <span class="material-symbols-sharp text-neutral-dark mr-2">
+                                            tools_pliers_wire_stripper
+                                        </span>
+                                        <span class="text-sm font-semibold text-neutral-dark">INSTALAÇÃO</span>
+                                    </div>
+                                    <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">more_horiz</a>
+                                    </span>
+                                </header>
+    
+                                <main class="pt-4">
+    
+                                    <div class="grid grid-cols-3 gap-6">
+
+                                        <!-- Número da Entrega -->
+                                        <div class="relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Nº Entrega" value="10008089"/>
+                                            <label for="" class="label-floating">Nº Entrega</label>
+                                        </div>
+
+                                        <!-- Loja Destino -->
+                                        <div class="col-span-2 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating truncate" placeholder="Loja Destino" value="DISPLAKK INDUSTRIA E COMERCIO DE PLACAS EIRELI"/>
+                                            <label for="" class="label-floating">Loja Destino</label>
+                                        </div>
+
+                                        <!-- Nome do Condutor / Entrega -->
+                                        <div class="col-span-2 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Modelo" value="ANDERSON  DIAS DE OLIVEIRA"/>
+                                            <label for="" class="label-floating">Nome Condutor</label>
+                                        </div>
+
+                                        <!-- CPF Condutor / Entrega -->
+                                        <div class="col-span-1 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Renavam" value="03168533726"/>
+                                            <label for="" class="label-floating">CPF</label>
+                                        </div>
+
+                                    </div>
+                                    
+                                </main>
+
+                                <footer>
+                                    
+                                </footer>
+                            </article>
+
+                            <!-- CARD VEÍCULO -->
+                            <article class="col-span-4 h-full p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header class="h-fit w-full flex justify-between">
+                                    <div class="flex items-center select-none">
+                                        <span class="material-symbols-sharp text-neutral-dark mr-2">
+                                            directions_car
+                                        </span>
+                                        <span class="text-sm font-semibold text-neutral-dark">VEÍCULO</span>
+                                    </div>
+                                    <span class="material-symbols-sharp" type="button" id="ditVeiculo" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">more_horiz</a>
+                                    </span>
+                                    <ul class="dropdown-menu min-w-max relative hidden bg-white text-base z-50 float-left list-none text-left rounded-xl shadow-lg mt-1 m-0 border-none" aria-labelledby="ditVeiculo">
                                         <li>
                                             <!-- Item Dropdown AUT -->
                                             <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-fit whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-t-xl" href="#">
@@ -394,118 +694,48 @@
     
                                 <main class="pt-4">
     
-                                    <div class="mb-2">
-                                        <h6 contenteditable="true" class="font-semibold leading-tight text-base mt-0 text-primary capitalize">DISPLAKK INDUSTRIA E COMERCIO DE PLACAS EIRELI</h6>
-                                        <p class="text-sm text-neutral"><span>(27)</span> 98118-5756</p>
-                                        <!-- <h6 contenteditable="true" class="font-semibold leading-tight text-base mt-0 mb-1 text-neutral">
-                                            <span class="bg-neutral-light/30 text-xs w-fit px-2 py-0.5 rounded-full mr-1">CNPJ</span>10.271.713/0007-39</h6> -->
-                                    </div>
-                                    <!-- CNPJ -->
-                                    <div class="w-full relative mt-4" disabled>
-                                        <input disabled  id="CNPJ" type="text" class="peer input-floating" placeholder="CNPJ" value="10.271.713/0007-39"/>
-                                        <label for="CNPJ" class="label-floating">CNPJ</label>
-                                    </div>
+                                    <div class="grid grid-cols-6 gap-6">
+                                        
+                                        <div class="relative col-span-4">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Descrição" value="I/ CHEV CRUZE LTZ NB AT /PRATA"/>
+                                            <label for="" class="label-floating">Descrição</label>
+                                        </div>
+                                        <!-- CNPJ -->
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Chassi" value="8AGBN69S0JR117046"/>
+                                            <label for="" class="label-floating">Chassi</label>
+                                        </div>
 
-                                    <!-- Email -->
-                                    <div class="w-full relative mt-4" disabled>
-                                        <input disabled  id="Email" type="text" class="peer input-floating" placeholder="Email" value="displak.viana@hotmail.com"/>
-                                        <label for="CNPJ" class="label-floating">Email</label>
-                                    </div>                               
-    
-                                </main>
-                                <footer>
-                                    
-                                </footer>
-                            </article>
-    
-                            <article class="flex h-48 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
-                                <header>
-    
-                                </header>
-                                <main></main>
-                                <footer></footer>
-                            </article>
-    
-                            <article class="flex h-64 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
-                                <header>teste</header>
-                                <main></main>
-                                <footer></footer>
-                            </article>
-                        </div>
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Placa" value="PARTICULAR / PRETO"/>
+                                            <label for="" class="label-floating">Categoria Placa</label>
+                                        </div>
 
-                        <div class="column04 flex flex-col gap-4">
-                            <article class="flex flex-col h-fit w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
-                                <header class="h-fit w-full flex justify-between">
-                                    <div class="flex items-center select-none">
-                                        <span class="material-symbols-sharp text-neutral mr-2">
-                                            directions_car
-                                        </span>
-                                        <span class="text-sm font-semibold text-neutral">Carro</span>
-                                    </div>
-                                    <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <a href="#" class="hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">more_horiz</a>
-                                    </span>
-                                </header>
-    
-                                <main class="pt-4">
-    
-                                    <div class="">
-
-                                        <h6 contenteditable="true" class="font-semibold leading-tight text-base mt-0 mb-1 text-primary">I/CHEV CRUZE LTZ NB AT /PRATA</h6>
-                                        <span class="bg-neutral-light/30 text-xs w-fit px-2 py-0.5 rounded-full mr-1 select-none">renavam</span>
-                                        <span contenteditable="true">10008089</span>
-                                        <!-- Input Text -->
-                                        <div class="w-full relative mt-4">
-                                            <input disabled id="categoria" type="text" class="peer input-floating" placeholder="Categoria" value="Particular/Preto"/>
-                                            <label for="categoria" class="label-floating">Categoria</label>
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Renavam" value="10008060"/>
+                                            <label for="" class="label-floating">Renavam</label>
                                         </div>
                                         
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Tipo" value="Carro"/>
+                                            <label for="" class="label-floating">Tipo</label>
+                                        </div>
+
                                     </div>
                                     
+    
                                 </main>
                                 <footer>
                                     
                                 </footer>
                             </article>
-    
-                            <article class="flex h-48 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
-                                <header>
-    
-                                </header>
-                                <main></main>
-                                <footer></footer>
-                            </article>
-    
-                            <article class="flex h-64 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
-                                <header>teste</header>
-                                <main></main>
-                                <footer></footer>
-                            </article>
+
                         </div>
-
-                        <div class="column04 flex flex-col gap-4">
-                                
-                            <article class="flex h-48 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
-                                <header>
-    
-                                </header>
-                                <main></main>
-                                <footer></footer>
-                            </article>
-    
-                            <article class="flex h-96 w-72 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
-                                <header>teste</header>
-                                <main></main>
-                                <footer></footer>
-                            </article>
-                        </div>
-
-                       
-
+                           
                     </section>
-    
-                    <section id="localizacao" class="flex flex-col gap-4 h-full bg-white px-16 py-8 snap-start snap-always">
-                        <h2 class="text-2xl font-semibold mb-8">Localização</h2>
+
+                    <section id="loja" class="flex gap-4 h-full bg-white px-16 py-8 snap-start snap-always">
+                        <h2 class="text-2xl font-semibold ">Proprietário</h2>
     
                         <div class="flex flex-wrap gap-4">
     
@@ -567,25 +797,11 @@
                         </div>
                     </section>
 
-                    <section id="loja" class="flex flex-col gap-4 h-full bg-white px-16 py-8 snap-start snap-always">
-                        <h2 class="text-2xl font-semibold">Loja</h2>
-    
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet euismod lacus, at ullamcorper sem. Sed sed sapien et mi dignissim tempor. Fusce libero tortor, lacinia eget dolor vitae, laoreet laoreet mauris. Nam consequat arcu tincidunt metus sodales sagittis. Mauris commodo enim ac pharetra lacinia. Donec quis posuere dui. Nunc at risus ac tellus commodo dictum sit amet nec leo. Duis nisl ante, tristique eu scelerisque ut, sagittis non ante. Nullam quis justo facilisis lacus vestibulum congue. Praesent egestas lacus id pulvinar pretium.
-    
-                            </p>
-                            <p>Fusce ullamcorper eros nisl, sed ullamcorper tellus tristique et. Pellentesque sed turpis vel eros iaculis elementum eget eu magna. Quisque felis ante, venenatis et ullamcorper in, viverra eget velit. Donec consectetur nisl vitae libero tincidunt, id bibendum mi tempus. Integer tincidunt magna diam. Curabitur egestas sem eros. Nulla leo massa, mattis a ullamcorper et, lacinia eget eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut egestas urna nisi, et placerat augue eleifend in. Nam in lacus ut elit euismod placerat.
-        
-                            </p>
-                            <p>Cras non mauris ac nisl iaculis hendrerit non quis libero. Cras at pulvinar eros. Maecenas porta risus ut arcu laoreet, pulvinar consequat elit gravida. Duis pharetra, urna at pretium bibendum, nibh neque ornare ex, at sagittis augue dolor vitae leo. Praesent at magna varius, tincidunt libero nec, vestibulum leo. Praesent non hendrerit ligula. Quisque sollicitudin aliquam arcu. Donec vulputate elit at euismod commodo. Phasellus id justo sed turpis suscipit rhoncus eget ac magna. Nunc fringilla pellentesque velit sed mattis. Proin a ipsum condimentum, congue tellus ac, lobortis dui.
-        
-                            </p>
-                            <p>Fusce quis nunc et neque dictum suscipit. Cras et placerat est. Maecenas vel ligula congue, egestas felis a, pulvinar nisi. Sed et eros at nisi rutrum aliquet vitae a nisl. Integer scelerisque metus eu ipsum suscipit, quis sollicitudin augue laoreet. Suspendisse at risus bibendum, vestibulum odio aliquet, sollicitudin diam. Phasellus non erat massa. In egestas nunc sed nunc tempus, non fermentum ipsum bibendum. Proin tristique ullamcorper elit, ac hendrerit metus luctus in.
-        
-                            </p>
-    
-    
+                    <section id="localizacao" class="flex flex-row justify-start flex-wrap w-fit min-w-[1264px] gap-4 h-full px-4 py-8 snap-start snap-always mx-auto">
+                        
+                        test
+
                     </section>
-    
                 </main>
                 
             </main>

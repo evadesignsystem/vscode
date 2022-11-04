@@ -51,7 +51,7 @@
     @apply py-2 px-2.5 w-full border-neutral-light border rounded-lg placeholder-transparent caret-primary focus:outline-none  focus:outline-2 focus:outline-primary/70;
 }
 .label-floating {
-    @apply absolute bg-gradient-to-b from-white via-white to-transparent left-3 -top-2.5 px-1 text-neutral-light text-sm antialiased transition-all pointer-events-none peer-placeholder-shown:text-base peer-placeholder-shown:text-neutral peer-placeholder-shown:top-2.5 peer-focus:-top-2.5 peer-focus:bg-gradient-to-b from-white to-transparent peer-focus:text-primary peer-focus:px-1 peer-focus:text-sm;
+    @apply absolute bg-gradient-to-b from-white via-white to-transparent left-3 -top-2.5 px-1 text-neutral/70 font-medium text-sm antialiased transition-all pointer-events-none peer-placeholder-shown:text-base peer-placeholder-shown:text-neutral peer-placeholder-shown:top-2.5 peer-focus:-top-2.5 peer-focus:bg-gradient-to-b from-white to-transparent peer-focus:text-primary peer-focus:px-1 peer-focus:text-sm;
 }
 .label-gray {
     @apply bg-gradient-to-b from-white peer-focus:bg-gradient-to-b from-neutral-light to-transparent;

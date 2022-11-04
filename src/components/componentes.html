@@ -115,30 +115,17 @@
 </div>
 
 
-<div class="flex justify-center">
-  <div class="mb-3 xl:w-96">
-    <select class="form-select appearance-none
-      block
-      w-full
-      px-3
-      py-1.5
-      text-base
-      font-normal
-      text-gray-700
-      bg-white bg-clip-padding bg-no-repeat
-      border border-solid border-gray-300
-      rounded
-      transition
-      ease-in-out
-      m-0
-      focus:text-gray-700 focus:bg-white focus:outline-none" aria-label="Default select example">
-        <option selected >Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+
+  <div class="mb-3 w-72" relative>
+    <select class="form-select input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Forma de Pagamento">
+        <option value="0">Forma de Pagamento</option>
+        <option value="1">Pix</option>
+        <option value="2">Boleto</option>
+        <option value="3">Cartão de Crédito</option>
     </select>
+    <label for="" class="label-floating">Forma de Pagamento</label>
   </div>
-</div>
+
 
 <!----------------------------------------------------------------------------------------->
 
@@ -167,7 +154,7 @@
           From: "opacity-100"
           To: "opacity-0"
       -->
-      <ul class="absolute z-10 mt-1 w-72 bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm" tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3">
+      <ul class="dropdown-menu absolute z-10 mt-1 w-72 bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm" tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3">
         <!--
           Select option, manage highlight styles based on mouseenter/mouseleave and keyboard navigation.
   
