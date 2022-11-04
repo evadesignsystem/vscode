@@ -3,6 +3,7 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   content: ['./src/**/*.html','./node_modules/tw-elements/dist/js/**/*.js'],
   theme: {
+    
     colors: {
       current: "currentColor",
       transparent: "transparent",
@@ -86,6 +87,12 @@ module.exports = {
       },
     },
     extend: {
+
+      screens: {
+        'xl': '1700px',
+        // => @media (min-width: 992px) { ... }
+      },
+
       fontFamily: {
         sans: ["Raleway", "sans-serif"],
       },

@@ -20,7 +20,7 @@
         <div class="flex flex-row">
 
             <!-- LEFT SIDEBAR // Barra Lateral Esquerda ( Logo / Menu / Usuário ) -->
-            <aside class="z-20 flex flex-col justify-between fixed h-screen w-16 xl:w-60 bg-white dark:bg-zinc-darker drop-shadow-xl transition-all ease-in-out">
+            <aside class="z-40 flex flex-col justify-between fixed h-screen w-16 xl:w-60 bg-white dark:bg-zinc-darker drop-shadow-xl transition-all ease-in-out">
                 
                 <!-- HEADER -->
                 <nav class="flex flex-col">
@@ -76,14 +76,14 @@
                                 </li>
 
                                 <li>
-                                    <a href="#integracoes" class="flex items-center justify-center xl:justify-start py-2 xl:px-4 text-sm text-neutral dark:text-white dark:hover:text-neutral-light font-semibold rounded-xl xl:active:bg-primary-lighter hover:text-neutral-dark"
+                                    <a href="#asideintegracoes" class="flex items-center justify-center xl:justify-start py-2 xl:px-4 text-sm text-neutral dark:text-white dark:hover:text-neutral-light font-semibold rounded-xl xl:active:bg-primary-lighter hover:text-neutral-dark"
                                         target="loading_content" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="distribuidoras">
                                         <span class="material-symbols-sharp text-2xl xl:mr-3">category</span>
                                         <span class="hidden xl:block">Integrações</span>
                                         <span class="material-symbols-sharp hidden xl:block text-2xl xl:ml-1">expand_more</span>
                                     </a>
 
-                                    <div id="integracoes" class="hidden xl:block collapse"> <!-- .COLLAPSE necessária para "refresh page (f5)" com submenu fechado -->
+                                    <div id="asideintegracoes" class="hidden xl:block collapse"> <!-- .COLLAPSE necessária para "refresh page (f5)" com submenu fechado -->
                                         <a href="#"
                                             class="flex items-center justify-center xl:justify-start py-1 xl:ml-[50px] text-xs text-neutral dark:text-white dark:hover:text-neutral-light font-semibold hover:text-neutral-dark transition-all ease-out duration-150"
                                             target="loading_content">
@@ -185,81 +185,101 @@
                 <header>
 
                     <!-- TOP // Sticky Superior ( Pesquisa / Outros ) -->
-                    <nav class="sticky top-0 px-4 flex justify-between min-w-[1234px] w-[calc(100vmax-64px)] xl:w-[calc(100vmax-240px)] bg-primary shadow-sm shadow-neutral-light/50">
-                        <div class="flex items-center px-4 h-16 relative gap-4">
+                    <nav class="z-30 sticky top-0 px-4 flex min-w-[1446px] w-[calc(100vmax-64px)] xl:w-[calc(100vmax-240px)] bg-primary shadow-sm shadow-neutral-light/50">
+                        <div class="w-full flex justify-between items-center px-4 h-16 relative gap-4">
                             
                             <ul class="flex gap-4 items-center h-[42px]">
-
                                 <li>
-                                    <!-- Search Field -->
-                                    <div class="w-28 focus-within:w-56 relative transition-all ease-in-out">
-                                        <input id="pesquisar" type="text" class="input-floating focus-within:pr-11 pl-5 pr-10 rounded-full" placeholder="search" />
-                                        <span class="material-symbols-sharp absolute text-2xl right-2.5 top-1.5 text-primary"><a href="#">search</a></span>
+                                    <!-- Search Field / focus-within:w-56 -->
+                                    <div class="w-44 relative transition-all ease-in-out">
+                                        <input id="pesquisar" type="text" class="peer input-floating focus-within:pr-11 pl-5 pr-10 rounded-full placeholder-neutral" placeholder="Pesquisar" />
+                                        <!-- <label for="pesquisar" class="label-floating">Pesquisar</label> -->
+                                        <span class="material-symbols-sharp absolute text-2xl right-2.5 top-1.5 text-primary">
+                                            <a href="#">search</a>
+                                        </span>
                                     </div>
-
                                 </li>
+                            </ul>
 
+                            <ul class="flex gap-4 items-center">
                                 <li>
-                                    <!-- Button Refresh --> 
-                                    <a href="" class="flex items-center text-primary-light hover:text-white">
-                                        <span class="material-symbols-sharp mr-1">refresh</span>Atualizar
-                                    </a>
-
+                                    <img class="rounded-sm" src="/src/img/placa.png" alt="">
                                 </li>
-                                
-                                <li> 
-                                    <!-- Button Info -->
-                                    <a href="" class="flex items-center text-primary-light hover:text-white " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span class="material-symbols-sharp mr-1">contact_support</span>Info
-                                    </a>
+                                <li>
+                                    <span class="text-xs inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-neutral-lighter text-gray-700 rounded-full">EVAUTAX</span>
+                                </li>
+                            </ul>
 
-                                    <!-- Dropdown AUT / BIN -->
-                                    <ul class="dropdown-menu min-w-max relative hidden bg-white text-base z-50 float-left list-none text-left rounded-xl shadow-lg mt-1 m-0 border-none" aria-labelledby="dropdownMenuButton1">
-                                        <li>
-                                            <!-- Item Dropdown AUT -->
-                                            <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-fit whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-t-xl" href="#">
-                                                <span class="material-symbols-sharp text-lg mr-2">key</span>AUT
+                            <div class="flex items-center px-4 h-16 gap-3">
+                            
+                                <div class="flex gap-4">
+                                    <ul class="flex gap-4 items-center h-[42px]">
+                                        
+                                        <li> 
+                                            <!-- Button Info -->
+                                            <a href="" class="flex items-center text-primary-light hover:text-white " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span class="material-symbols-sharp mr-1">construction</span>Ferramentas
                                             </a>
+        
+                                            <!-- Dropdown Menu Ferramentas -->
+                                            <ul class="dropdown-menu min-w-max relative hidden bg-white text-base z-50 float-left list-none text-left rounded-xl shadow-lg mt-1 m-0 border-none" aria-labelledby="dropdownMenuButton1">
+                                                <li>
+                                                    <!-- Item Dropdown AUT -->
+                                                    <a class="text-xs py-2 px-4 font-medium flex justify-start items-center w-full whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-t-xl" href="#">
+                                                        <span class="material-symbols-sharp text-lg mr-2">key</span>CONSULTA AUT
+                                                    </a>
+                                                </li>
+        
+                                                <li>
+                                                    <!-- Item Dropdown BIN -->
+                                                    <a class="text-xs py-2 px-4 font-medium flex justify-start items-center w-full whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter" href="#">
+                                                        <span class="material-symbols-sharp text-lg mr-2">pin</span>CONSULTA BIN
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <!-- Item Dropdown BIN -->
+                                                    <a class="text-xs py-2 px-4 font-medium flex justify-start items-center w-full whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter" href="#">
+                                                        <span class="material-symbols-sharp text-lg mr-2">data_object</span>JSON ENVIO
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <!-- Item Dropdown BIN -->
+                                                    <a class="text-xs py-2 px-4 font-medium flex justify-start items-center w-full whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-b-xl" href="#">
+                                                        <span class="material-symbols-sharp text-lg mr-2">alt_route</span>DESVINCULAR NF
+                                                    </a>
+                                                </li>
+    
+                                                <li>
+                                                    <!-- Item Dropdown BIN -->
+                                                    <a class="text-xs py-2 px-4 font-medium flex justify-start items-center w-full whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-b-xl" href="#">
+                                                        <span class="material-symbols-sharp text-lg mr-2">delete</span>EXCLUIR ATENDIMENTO
+                                                    </a>
+                                                </li>
+        
+                                            </ul>
                                         </li>
-
-                                        <li>
-                                            <!-- Item Dropdown BIN -->
-                                            <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-full whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-b-xl" href="#">
-                                                <span class="material-symbols-sharp text-lg mr-2">pin</span>BIN
-                                            </a>
-                                        </li>
-
+    
                                     </ul>
-                                </li>
-
-                            </ul>                     
+    
+                                </div>
+                        
+        
+                            </div>
                                                     
                         </div>
-                        <div class="flex items-center px-4 h-16 relative gap-3">
-                            
-                            <div class="flex gap-4">
-                                <!-- Tasks -->
-                                <a href="" class="flex items-center text-primary-light hover:text-white">
-                                    <span class="material-symbols-sharp mr-1">sms</span> Chamados
-                                </a>
 
-                                <!-- Notifications -->
-                                <a href="" class="flex items-center text-primary-light hover:text-white">
-                                    <span class="material-symbols-sharp mr-1">notifications</span> Notificações
-                                </a>
-
-                            </div>
-                    
-    
-                        </div>
+                        
+                        
                     </nav>
                     
                     <!-- NAVIGATION // Sticky Inferior ( Navegação Interna ) -->
-                    <nav class="-z-10 fixed min-w-[1234px] w-[calc(100vmax-64px)] xl:w-[calc(100vmax-240px)] bg-white">
+                    <nav class="z-20 fixed min-w-[1446px] w-[calc(100vmax-64px)] xl:w-[calc(100vmax-240px)] bg-white">
                         <div class="flex items-center justify-center h-16">
 
                             <!-- LINKS // Âncoras -->
-                            <ul class="flex gap-2 font-medium">
+                            <ul class="flex gap-2 font-medium ">
                                 <li>
                                     <a class="text-white bg-primary rounded-full px-4 py-2" href="#atendimento">Atendimento</a>
                                 </li>
@@ -270,23 +290,15 @@
                                     <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#loja">Loja</a>
                                 </li>
                                 <li>
-                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#notafiscal">Nota Fiscal</a>
-                                </li>
-                                <li>
-                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#entrega">Entrega</a>
+                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#pagamento">Pagamento</a>
                                 </li>
                                 <li>
                                     <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#fotos">Fotos</a>
                                 </li>
                                 <li>
-                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#serial">Serial</a>
+                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#integracoes">Integrações</a>
                                 </li>
-                                <li>
-                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#json">JSON</a>
-                                </li>
-                                <li>
-                                    <a class="text-primary hover:text-primary-dark hover:bg-neutral-light/25 rounded-full px-4 py-2" href="#slots">Slots</a>
-                                </li>
+
                             </ul>
                         </div>                 
                     </nav>
@@ -294,9 +306,9 @@
                 </header>
 
                 <!-- ONEPAGE CONTENT // Conteúdo da Página Selecionada ( Todas as Seções da Página ) -->
-                <main class="-z-20 mt-16 fixed min-w-[1234px] h-[calc(100vh-128px)] snap-mandatory snap-y overflow-y-scroll scroll-smooth">
+                <main class="-z-20 block mt-16 min-w-[1446px] h-[calc(100vh-128px)] snap-mandatory snap-y overflow-y-scroll scroll-smooth">
                     
-                    <section id="atendimento" class="h-full w-[1366px] min-w-[1264px] px-4 py-6 snap-start snap-always mx-auto">
+                    <section id="atendimento" class="w-[1366px] p-4 snap-start snap-always mx-auto">
                         
                         <div class="grid grid-cols-8 gap-4 h-auto">
 
@@ -309,9 +321,20 @@
                                         </span>
                                         <span class="text-sm font-semibold text-neutral-dark">OS</span>
                                     </div>
-                                    <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <a href="#" class="text-positive hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
-                                    </span>
+                                    <div>
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
+                                            <a href="#" class="text-negative-light hover:bg-negative-lighter/50 rounded-full px-1.5 py-1 h-fit transition">close</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Salvar">
+                                            <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">save</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Editando...">
+                                            <a href="#" class="text-positive/70 hover:bg-positive-lighter/50 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
+                                        </span>
+                                        
+                                    </div>
                                 </header>
     
                                 <main class="pt-4">
@@ -323,8 +346,14 @@
                                             <label for="" class="label-floating">Nº Autorização</label>
                                         </div>
 
+                                        <!-- Placa -->
+                                        <div class="col-span-2 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Placa" value="QRB2F05"/>
+                                            <label for="" class="label-floating">Placa</label>
+                                        </div>
+
                                         <!-- Loja Vinculada -->
-                                        <div class="col-span-9 relative">
+                                        <div class="col-span-7 relative">
                                             <input disabled id="" type="text" class="peer input-floating" placeholder="Loja Vinculada" value="DISPLAKK INDUSTRIA E COMERCIO DE PLACAS EIRELI"/>
                                             <label for="" class="label-floating">Loja Vinculada</label>
                                         </div>
@@ -512,24 +541,20 @@
                                         </span>
                                         <span class="text-sm font-semibold text-neutral-dark">PROPRIETÁRIO</span>
                                     </div>
-                                    <span class="material-symbols-sharp text-neutral-dark dropdown-toggle" type="button" id="ditCard" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <a href="#" class="hover:bg-secondary-lighter/30 rounded-full px-1.5 py-1 h-fit transition">more_horiz</a>
-                                    </span>
-                                    <ul class="dropdown-menu min-w-max relative hidden bg-white text-base z-50 float-left list-none text-left rounded-xl shadow-lg mt-1 m-0 border-none" aria-labelledby="ditCard">
-                                        <li>
-                                            <!-- Item Dropdown AUT -->
-                                            <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-fit whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-t-xl" href="#">
-                                                <span class="material-symbols-sharp text-lg mr-2">key</span>AUT
-                                            </a>
-                                        </li>
-    
-                                        <li>
-                                            <!-- Item Dropdown BIN -->
-                                            <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-full whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-b-xl" href="#">
-                                                <span class="material-symbols-sharp text-lg mr-2">pin</span>BIN
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <div>
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
+                                            <a href="#" class="text-negative-light hover:bg-negative-lighter/50 rounded-full px-1.5 py-1 h-fit transition">close</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Salvar">
+                                            <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">save</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Editando...">
+                                            <a href="#" class="text-positive/70 hover:bg-positive-lighter/50 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
+                                        </span>
+                                        
+                                    </div>
                                 </header>
     
                                 <main class="pt-4">
@@ -577,9 +602,20 @@
                                         </span>
                                         <span class="text-sm font-semibold text-neutral-dark">SERIAL</span>
                                     </div>
-                                    <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <a href="#" class="hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">more_horiz</a>
-                                    </span>
+                                    <div>
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
+                                            <a href="#" class="text-negative-light hover:bg-negative-lighter/50 rounded-full px-1.5 py-1 h-fit transition">close</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Salvar">
+                                            <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">save</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Editando...">
+                                            <a href="#" class="text-positive/70 hover:bg-positive-lighter/50 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
+                                        </span>
+                                        
+                                    </div>
                                 </header>
     
                                 <main class="pt-4">
@@ -587,18 +623,69 @@
                                     <div class="grid grid-cols-3 gap-6">
                                                                                 
                                         <div class="col-span-3 relative">
-                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Serial 01" value="210801042523546"/>
+                                            <input  id="" type="text" class="peer input-floating pr-24" placeholder="Serial 01" value="210801042523546"/>
                                             <label for="" class="label-floating">Serial 01</label>
+                                            <ul class="flex gap-2 absolute top-[6px] right-2 text-neutral/70">
+                                                <li>
+                                                    <span data-bs-toggle="tooltip" title="Upload" class="material-symbols-sharp text-xl hover:text-positive/70 transition-all cursor-pointer">
+                                                      cloud_upload
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span data-bs-toggle="tooltip" title="Download" class="material-symbols-sharp text-xl hover:text-positive/70 transition-all cursor-pointer">
+                                                        cloud_download
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span data-bs-toggle="tooltip" title="Excluir" class="material-symbols-sharp text-xl hover:text-negative-light transition-all cursor-pointer">
+                                                        delete
+                                                    </span>
+                                                </li>
+                                            </ul>
                                         </div>
 
                                         <div class="col-span-3 relative">
-                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Serial 02" value="210801042523545"/>
+                                            <input disabled  id="" type="text" class="peer input-floating pr-24" placeholder="Serial 02" value="210801042523545"/>
                                             <label for="" class="label-floating">Serial 02</label>
+                                            <ul class="flex gap-2 absolute top-[6px] right-2 text-neutral/70">
+                                                <li>
+                                                    <span data-bs-toggle="tooltip" title="Upload" class="material-symbols-sharp text-xl hover:text-positive/70 transition-all cursor-pointer">
+                                                      cloud_upload
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span data-bs-toggle="tooltip" title="Download" class="material-symbols-sharp text-xl hover:text-positive/70 transition-all cursor-pointer">
+                                                        cloud_download
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span data-bs-toggle="tooltip" title="Excluir" class="material-symbols-sharp text-xl hover:text-negative-light transition-all cursor-pointer">
+                                                        delete
+                                                    </span>
+                                                </li>
+                                            </ul>
                                         </div>
 
                                         <div class="col-span-3 relative">
-                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Serial 03" value="null"/>
+                                            <input disabled  id="" type="text" class="peer input-floating pr-24" placeholder="Serial 03" value="null"/>
                                             <label for="" class="label-floating">Serial 03</label>
+                                            <ul class="flex gap-2 absolute top-[6px] right-2 text-neutral/70">
+                                                <li>
+                                                    <span data-bs-toggle="tooltip" title="Upload" class="material-symbols-sharp text-xl hover:text-positive/70 transition-all cursor-pointer">
+                                                      cloud_upload
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span data-bs-toggle="tooltip" title="Download" class="material-symbols-sharp text-xl hover:text-positive/70 transition-all cursor-pointer">
+                                                        cloud_download
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span data-bs-toggle="tooltip" title="Excluir" class="material-symbols-sharp text-xl hover:text-negative-light transition-all cursor-pointer">
+                                                        delete
+                                                    </span>
+                                                </li>
+                                            </ul>
                                         </div>
 
                                     </div>
@@ -621,9 +708,20 @@
                                         </span>
                                         <span class="text-sm font-semibold text-neutral-dark">INSTALAÇÃO</span>
                                     </div>
-                                    <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <a href="#" class="hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">more_horiz</a>
-                                    </span>
+                                    <div>
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
+                                            <a href="#" class="text-negative-light hover:bg-negative-lighter/50 rounded-full px-1.5 py-1 h-fit transition">close</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Salvar">
+                                            <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">save</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Editando...">
+                                            <a href="#" class="text-positive/70 hover:bg-positive-lighter/50 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
+                                        </span>
+                                        
+                                    </div>
                                 </header>
     
                                 <main class="pt-4">
@@ -672,24 +770,20 @@
                                         </span>
                                         <span class="text-sm font-semibold text-neutral-dark">VEÍCULO</span>
                                     </div>
-                                    <span class="material-symbols-sharp" type="button" id="ditVeiculo" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <a href="#" class="hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">more_horiz</a>
-                                    </span>
-                                    <ul class="dropdown-menu min-w-max relative hidden bg-white text-base z-50 float-left list-none text-left rounded-xl shadow-lg mt-1 m-0 border-none" aria-labelledby="ditVeiculo">
-                                        <li>
-                                            <!-- Item Dropdown AUT -->
-                                            <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-fit whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-t-xl" href="#">
-                                                <span class="material-symbols-sharp text-lg mr-2">key</span>AUT
-                                            </a>
-                                        </li>
-    
-                                        <li>
-                                            <!-- Item Dropdown BIN -->
-                                            <a class="text-xs py-2 px-4 font-medium flex justify-center items-center w-full whitespace-nowrap bg-transparent text-neutral hover:text-neutral-darker hover:bg-primary-lighter hover:rounded-b-xl" href="#">
-                                                <span class="material-symbols-sharp text-lg mr-2">pin</span>BIN
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <div>
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
+                                            <a href="#" class="text-negative-light hover:bg-negative-lighter/50 rounded-full px-1.5 py-1 h-fit transition">close</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Salvar">
+                                            <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">save</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Editando...">
+                                            <a href="#" class="text-positive/70 hover:bg-positive-lighter/50 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
+                                        </span>
+                                        
+                                    </div>
                                 </header>
     
                                 <main class="pt-4">
@@ -734,72 +828,91 @@
                            
                     </section>
 
-                    <section id="loja" class="flex gap-4 h-full bg-white px-16 py-8 snap-start snap-always">
-                        <h2 class="text-2xl font-semibold ">Proprietário</h2>
-    
-                        <div class="flex flex-wrap gap-4">
-    
-                            <!-- Input Text -->
-                            <div class="w-72 relative">
-                                <input id="" type="text" class="peer input-floating" placeholder="Username"/>
-                                <label for="" class="label-floating">Username</label>
-                            </div>
-                            
-                            <!-- Input Password -->
-                            <div class="w-72 relative">
-                                <input id="password" type="password" class="peer input-floating" placeholder="password"/>
-                                <label for="password" class="label-floating disabled">Password</label>
-                            </div>
-                        
-                            <!-- Buttons -->
-                        
-                            <div class="mb-4 col-span-2">
-                                <button type="button" class="rounded-button secondary-button" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                                <!-- <i class="fa-solid fa-trash-can mr-3"></i>-->
-                                    secondary
-                                </button>
-                            </div>
-                        
-                            <div class="col-span-1">
-                                <button type="button" class="rounded-button-io secondary-button" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                                    <i class="fa-solid fa-trash-can h-6 w-6 flex justify-center items-center"></i>
-                                </button>
-                            </div>
-                        
-                            <div class="mb-4 col-span-2">
-                                <button type="button" class="rounded-button primary-button" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                                    <!-- <i class="fa-solid fa-trash-can mr-3"></i> -->
-                                    <span class="material-symbols-sharp mr-2">contact_support</span>
-                                    primary button
-                                </button>
-                            </div>
-                        
-                            <div class="mb-4 col-span-2">
-                                <button type="button" class="rounded-button secondary-button" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                                    <i class="fa-solid fa-trash-can mr-3"></i>
-                                    button
-                                </button>
-                            </div>
-                        
-                            <div>
-                                <button type="button" class="square-button secondary-button" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                                    secondary button
-                                </button>
-                            </div>
-                        
-                            <div class="mb-4 col-span-2">
-                                <button type="button" class="rounded-button primary-button" data-mdb-ripple="true" data-mdb-ripple-color="light" data-bs-toggle="modal" data-bs-target="#modal-teste">
-                                    <i class="fa-solid fa-trash-can mr-3"></i>
-                                primary button
-                                </button>
-                            </div>
-    
+                    <section id="localizacao" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full">
+
+                        <div class="grid grid-cols-8 gap-4 h-auto">
+
+                            <!-- CARD 01 -->
+                            <article class="col-span-8 h-[640px] row-span-2 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                            <header class="h-fit w-full flex justify-between">
+                                <div class="flex items-center select-none">
+                                    <span class="material-symbols-sharp text-neutral-dark mr-2">
+                                        location_on
+                                    </span>
+                                    <span class="text-sm font-semibold text-neutral-dark">Localização</span>
+                                </div>
+                                <div>
+                                    <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
+                                        <a href="#" class="text-negative-light hover:bg-negative-lighter/50 rounded-full px-1.5 py-1 h-fit transition">close</a>
+                                    </span>
+
+                                    <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Salvar">
+                                        <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">save</a>
+                                    </span>
+
+                                    <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Editando...">
+                                        <a href="#" class="text-positive/70 hover:bg-positive-lighter/50 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
+                                    </span>
+                                    
+                                </div>
+                            </header>
+
+                            <main class="pt-4">
+                                <div class="grid grid-cols-12 gap-6">
+
+
+                                    <iframe class="col-span-12 w-full " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.5662344772145!2d-43.37817947059981!3d-23.0029728989841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdbae11ac6195%3A0x7877669bde544237!2sAv.%20General%20Olyntho%20Pillar%2C%20300%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022793-610%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1667597489784!5m2!1spt-BR!2sus" width="600" height="560" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                                </div>
+                                
+                            </main>
+                            <footer>
+                                
+                            </footer>
+                            </article>        
+
                         </div>
+
                     </section>
 
-                    <section id="localizacao" class="flex flex-row justify-start flex-wrap w-fit min-w-[1264px] gap-4 h-full px-4 py-8 snap-start snap-always mx-auto">
+                    <section id="loja" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full">
                         
-                        test
+                        <div class="grid grid-cols-8 gap-4 h-auto">
+
+                            LOJA
+
+                        </div>
+
+                    </section>
+
+                    <section id="pagamento" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full">
+                        
+                        <div class="grid grid-cols-8 gap-4 h-auto">
+
+                            PAGAMENTO
+
+                        </div>
+
+                    </section>
+
+                    <section id="fotos" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full">
+                        
+                        <div class="grid grid-cols-8 gap-4 h-auto">
+
+                            FOTOS
+
+                        </div>
+
+                    </section>
+
+                    <section id="integracoes" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full">
+                        
+                        <div class="grid grid-cols-8 gap-4 h-auto">
+
+                            INTEGRAÇÕES
+
+                        </div>
 
                     </section>
                 </main>
@@ -845,13 +958,13 @@
 
 <!-- Required popper.js -->
 <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
-<script>
-  var popoverTriggerList = [].slice.call(
-    document.querySelectorAll('[data-bs-toggle="popover"]')
-  );
-  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-    return new Popover(popoverTriggerEl);
-  });
-</script>
+<script type="text/javascript">
+    var tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new Tooltip(tooltipTriggerEl);
+    });
+  </script>
 
 </html>
