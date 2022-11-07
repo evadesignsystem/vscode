@@ -201,7 +201,7 @@
                                 </li>
                             </ul>
 
-                            <ul class="flex gap-4 items-center">
+                            <ul class="flex gap-4 items-center select-none">
                                 <li>
                                     <img class="rounded-sm" src="/src/img/placa.png" alt="">
                                 </li>
@@ -270,8 +270,6 @@
                                                     
                         </div>
 
-                        
-                        
                     </nav>
                     
                     <!-- NAVIGATION // Sticky Inferior ( Navegação Interna ) -->
@@ -424,6 +422,55 @@
 
                                         <!-- Forma de Pagamento -->
                                         <div class="col-span-3 relative">
+                                            <button id="select" type="button" class="dropdown-toggle pl-3 pr-10 py-2 text-left peer input-floating" data-bs-toggle="dropdown" aria-expanded="false">
+                                              <span class="block truncate">Boleto</span>
+                                              <span class="material-symbols-sharp text-neutral-dark absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">expand_more</span>
+                                            </button>
+                                            
+                                            <ul class="dropdown-menu hidden absolute inset-y-2 z-10 mt-1 w-[223px] bg-white shadow-lg max-h-48 rounded-md text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none" aria-labelledby="select" >
+                                                
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="listbox-option-1" role="option">
+                                                    <span class="font-normal block truncate">Transferência</span>
+                                                </li>
+                                                
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="listbox-option-2" role="option">
+                                                <span class="font-normal block truncate">Pix</span>
+                                                </li>
+
+                                                <li class="text-neutral-dark hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="listbox-option-3" role="option">
+                                                <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+                                                <span class="font-semibold block truncate">Boleto</span>
+                                                <!-- Option Selected -->
+                                                <span class="material-symbols-sharp text-2xl text-primary absolute inset-y-0 right-0 flex items-center pr-4">
+                                                    done
+                                                </span>
+                                                </li>
+
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="listbox-option-4" role="option">
+                                                <span class="font-normal block truncate">Dinheiro</span>
+                                                </li>
+
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="listbox-option-5" role="option">
+                                                <span class="font-normal block truncate">Cartão de Crédito</span>
+                                                </li>
+
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="listbox-option-6" role="option">
+                                                <span class="font-normal block truncate">Cartão de Débito</span>
+                                                </li>
+
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="listbox-option-7" role="option">
+                                                <span class="font-normal block truncate">Contra Apresentação</span>
+                                                </li>
+
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="listbox-option-8" role="option">
+                                                <span class="font-normal block truncate">Account Money</span>
+                                                </li>
+
+                                            </ul>
+                                      
+                                            <label for="select" id="listbox-label" class="label-floating">Forma de Pagamento</label>
+                                        </div>
+                                        <!-- <div class="col-span-3 relative">
                                             <select disabled id="formaPagamento" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Forma de Pagamento">
                                                 <option value="1">Boleto</option>
                                                 <option value="2">Dinheiro</option>
@@ -436,7 +483,7 @@
                                                 <option selected value="9">Pix</option>
                                             </select>
                                             <label for="formaPagamento" class="label-floating">Forma de Pagamento</label>
-                                        </div>
+                                        </div> -->
 
                                         <!-- Quantidade de Placas -->
                                         <div class="col-span-2 relative">
