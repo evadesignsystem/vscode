@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <link rel="stylesheet" href="/dist/output.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@latest/dist/output.css" /> -->
+
+    <!-- spotlight cdn -->
+    <link rel="stylesheet" href="https://rawcdn.githack.com/nextapps-de/spotlight/0.7.8/dist/css/spotlight.min.css">
+    <script src="https://rawcdn.githack.com/nextapps-de/spotlight/0.7.8/dist/js/spotlight.min.js"></script>
 </head>
 
 <body class="bg-ambient-white dark:bg-zinc-darker/95 overflow-hidden">
@@ -306,7 +310,7 @@
                 <!-- ONEPAGE CONTENT // Conteúdo da Página Selecionada ( Todas as Seções da Página ) -->
                 <main class="-z-20 block mt-16 min-w-[1446px] h-[calc(100vh-128px)] snap-mandatory snap-y overflow-y-scroll scroll-smooth">
                     
-                    <section id="atendimento" class="w-[1366px] p-4 snap-start snap-always mx-auto">
+                    <section id="atendimento" class="w-[1366px] p-4 snap-start snap-always mx-auto hidden">
                         
                         <div class="grid grid-cols-8 gap-4 h-auto">
 
@@ -427,7 +431,7 @@
                                               <span class="material-symbols-sharp text-neutral-dark absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">expand_more</span>
                                             </button>
                                             
-                                            <ul class="dropdown-menu hidden absolute inset-y-2 z-10 mt-1 w-[223px] bg-white shadow-lg max-h-48 rounded-md text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none" aria-labelledby="select" >
+                                            <ul class="dropdown-menu hidden absolute inset-y-2 z-10 mt-1 w-[223px] bg-white shadow-lg max-h-48 h-48 rounded-md text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none" aria-labelledby="select" >
                                                 
                                                 <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="listbox-option-1" role="option">
                                                     <span class="font-normal block truncate">Transferência</span>
@@ -875,18 +879,186 @@
                            
                     </section>
 
-                    <section id="localizacao" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full">
+                    <section id="localizacao" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full hidden">
 
                         <div class="grid grid-cols-8 gap-4 h-auto">
 
-                            <!-- CARD 01 -->
-                            <article class="col-span-8 h-[640px] row-span-2 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                            <!-- CARD LOCALIZAÇÃO -->
+                            <article class="col-span-4 h-fit py-4 px-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header class="h-fit w-full flex justify-between dropend">
+                                    <div class="flex items-center select-none">
+                                        <span class="material-symbols-sharp text-neutral-dark mr-2">
+                                            push_pin
+                                        </span>
+                                        <span class="text-sm font-semibold text-neutral-dark">LOCALIZAÇÃO</span>
+                                    </div>
+                                    <div>
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
+                                            <a href="#" class="text-negative-light hover:bg-negative-lighter/50 rounded-full px-1.5 py-1 h-fit transition">close</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Salvar">
+                                            <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">save</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Editando...">
+                                            <a href="#" class="text-positive/70 hover:bg-positive-lighter/50 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
+                                        </span>
+                                        
+                                    </div>
+                                </header>
+    
+                                <main class="pt-4">
+    
+                                    <div class="grid grid-cols-8 gap-6">
+
+                                        <div class="relative col-span-8">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Logradouro" value="ELDES SCHERRER SOUZA"/>
+                                            <label for="" class="label-floating">Logradouro</label>
+                                        </div>
+
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Número" value="2286"/>
+                                            <label for="" class="label-floating">Número</label>
+                                        </div>
+
+                                        <div class="relative col-span-6">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Bairro" value="COLINA DE LARANJEIRAS"/>
+                                            <label for="" class="label-floating">Bairro</label>
+                                        </div>
+
+                                        <div class="relative col-start-1 col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="CEP" value="29167-080"/>
+                                            <label for="" class="label-floating">CEP</label>
+                                        </div>
+
+                                        <div class="relative col-span-4">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Cidade" value="SERRA"/>
+                                            <label for="" class="label-floating">Cidade</label>
+                                        </div>
+
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Estado" value="ES"/>
+                                            <label for="" class="label-floating">Estado</label>
+                                        </div>
+
+                                        <div class="relative col-span-4">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Latitude" value="-20.1808202"/>
+                                            <label for="" class="label-floating">Latitude</label>
+                                        </div>
+
+                                        <div class="relative col-span-4">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Longitude" value="-40.2921638"/>
+                                            <label for="" class="label-floating">Longitude</label>
+                                        </div>
+
+                                    </div>
+                                        
+                                </main>
+                                <footer>
+                                    <!-- <div>
+                                        <button type="button" class="square-button primary-button w-" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                            secondary button
+                                        </button>
+                                    </div> -->
+                                </footer>
+                            </article>
+
+                            <!-- CARD INSTALAÇÃO -->
+                            <article class="col-span-4 h-fit py-4 px-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header class="h-fit w-full flex justify-between dropend">
+                                    <div class="flex items-center select-none">
+                                        <span class="material-symbols-sharp text-neutral-dark mr-2">
+                                            push_pin
+                                        </span>
+                                        <span class="text-sm font-semibold text-neutral-dark">INSTALAÇÃO</span>
+                                    </div>
+                                    <div>
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
+                                            <a href="#" class="text-negative-light hover:bg-negative-lighter/50 rounded-full px-1.5 py-1 h-fit transition">close</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Salvar">
+                                            <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">save</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Editando...">
+                                            <a href="#" class="text-positive/70 hover:bg-positive-lighter/50 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
+                                        </span>
+                                        
+                                    </div>
+                                </header>
+    
+                                <main class="pt-4">
+    
+                                    <div class="grid grid-cols-8 gap-6">
+
+                                        <div class="relative col-span-6">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Logradouro" value="ELDES SCHERRER SOUZA"/>
+                                            <label for="" class="label-floating">Logradouro</label>
+                                        </div>
+
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Número" value="2286"/>
+                                            <label for="" class="label-floating">Número</label>
+                                        </div>
+                                        
+                                        <div class="relative col-span-3">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Complemento" value="SERRA"/>
+                                            <label for="" class="label-floating">Complemento</label>
+                                        </div>
+
+                                        <div class="relative col-span-5">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Bairro" value="COLINA DE LARANJEIRAS"/>
+                                            <label for="" class="label-floating">Bairro</label>
+                                        </div>
+
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="CEP" value="29167-080"/>
+                                            <label for="" class="label-floating">CEP</label>
+                                        </div>
+
+                                        <div class="relative col-span-4">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Categoria" value=" "/>
+                                            <label for="" class="label-floating">Categoria</label>
+                                        </div>
+
+
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Estado" value="ES"/>
+                                            <label for="" class="label-floating">Estado</label>
+                                        </div>
+
+                                        <div class="relative col-span-4">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Latitude" value="-20.1808202"/>
+                                            <label for="" class="label-floating">Latitude</label>
+                                        </div>
+
+                                        <div class="relative col-span-4">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Longitude" value="-40.2921638"/>
+                                            <label for="" class="label-floating">Longitude</label>
+                                        </div>
+
+                                    </div>
+                                        
+                                </main>
+                                <footer>
+                                    <!-- <div>
+                                        <button type="button" class="square-button primary-button w-" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                            secondary button
+                                        </button>
+                                    </div> -->
+                                </footer>
+                            </article>
+
+                            <!-- CARD MAPA -->
+                            <article class="col-span-8 h-fit row-span-2 p-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
                             <header class="h-fit w-full flex justify-between">
                                 <div class="flex items-center select-none">
                                     <span class="material-symbols-sharp text-neutral-dark mr-2">
-                                        location_on
+                                        navigation
                                     </span>
-                                    <span class="text-sm font-semibold text-neutral-dark">Localização</span>
+                                    <span class="text-sm font-semibold text-neutral-dark">MAPA</span>
                                 </div>
                                 <div>
                                     <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
@@ -908,7 +1080,7 @@
                                 <div class="grid grid-cols-12 gap-6">
 
 
-                                    <iframe class="col-span-12 w-full " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.5662344772145!2d-43.37817947059981!3d-23.0029728989841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdbae11ac6195%3A0x7877669bde544237!2sAv.%20General%20Olyntho%20Pillar%2C%20300%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022793-610%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1667597489784!5m2!1spt-BR!2sus" width="600" height="560" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <iframe class="col-span-12 w-full " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.5662344772145!2d-43.37817947059981!3d-23.0029728989841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdbae11ac6195%3A0x7877669bde544237!2sAv.%20General%20Olyntho%20Pillar%2C%20300%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022793-610%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1667597489784!5m2!1spt-BR!2sus" width="600" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
                                 </div>
@@ -917,13 +1089,15 @@
                             <footer>
                                 
                             </footer>
-                            </article>        
+                            </article>
+                            
+                            
 
                         </div>
 
                     </section>
 
-                    <section id="loja" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full">
+                    <section id="loja" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full hidden">
                         
                         <div class="grid grid-cols-8 gap-4 h-auto">
 
@@ -933,7 +1107,7 @@
 
                     </section>
 
-                    <section id="pagamento" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full">
+                    <section id="pagamento" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full hidden">
                         
                         <div class="grid grid-cols-8 gap-4 h-auto">
 
@@ -945,9 +1119,196 @@
 
                     <section id="fotos" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full">
                         
-                        <div class="grid grid-cols-8 gap-4 h-auto">
+                        <div class="grid grid-cols-8 gap-4 h-fit">
 
-                            FOTOS
+                            <!-- CARD FOTOS VEÍCULO -->
+                            <article class="col-span-5 py-4 px-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header class="h-fit w-full flex justify-between dropend">
+                                    <div class="flex items-center select-none">
+                                        <span class="material-symbols-sharp text-neutral-dark mr-2">
+                                            gallery_thumbnail
+                                        </span>
+                                        <span class="text-sm font-semibold text-neutral-dark">FOTOS VEÍCULO</span>
+                                    </div>
+                                    <div>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Upload">
+                                            <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">upload</a>
+                                        </span>
+                                        
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
+                                            <a href="#" class="text-negative-light hover:bg-negative-lighter/50 rounded-full px-1.5 py-1 h-fit transition">close</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Salvar">
+                                            <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">save</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Editando...">
+                                            <a href="#" class="text-positive/70 hover:bg-positive-lighter/50 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
+                                        </span>
+                                        
+                                    </div>
+                                </header>
+    
+                                <main class="pt-4">
+
+                                    <section class="flex flex-col gap-6 w-full overflow-hidden text-gray-700">
+                                              
+                                        <!-- Fotos Veículo -->
+                                        <div class="grid grid-cols-4 gap-6">
+
+                                            <figure class="col-span-1 cursor-pointer">
+                                                <a class="spotlight block bg-stripes-gray rounded-2xl" href="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=065977a3-ef95-4291-8fd2-bbfdd5a16a12&mapfiled=fotos.jpeg&uf=es">
+                                                    <img class="object-cover rounded-2xl w-full h-40 hover:" src="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=065977a3-ef95-4291-8fd2-bbfdd5a16a12&mapfiled=fotos.jpeg&uf=es" alt="QR DIANTEIRA">
+                                                </a>
+                                                <figcaption class="mt-2 text-sm text-center font-semibold text-neutral-dark dark:text-gray-400">QR Dianteira</figcaption>
+                                            </figure>
+    
+                                            <!-- QR TRASEIRA -->
+                                            <figure class="col-span-1 cursor-pointer">
+                                                <a class="spotlight block bg-stripes-gray rounded-2xl" href="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=f354015b-4852-4784-811c-9b247ab12e2a&mapfiled=fotos.jpeg&uf=es">
+                                                    <img class="rounded-2xl object-cover w-full h-40" src="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=f354015b-4852-4784-811c-9b247ab12e2a&mapfiled=fotos.jpeg&uf=es" alt="image description">
+                                                </a> 
+                                                <figcaption class="mt-2 text-sm text-center font-semibold text-neutral-dark dark:text-gray-400">QR Traseira</figcaption>
+                                            </figure>
+                                            
+                                            <!-- PLaca Dianteira -->
+                                            <figure class="col-span-1 cursor-pointer">
+                                                <a class="spotlight block bg-stripes-gray rounded-2xl" href="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=cce2d84f-a419-49ad-b721-6bb6729e6b59&mapfiled=fotos.jpeg&uf=es">
+                                                    <img class="rounded-2xl object-cover w-full h-40 " src="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=cce2d84f-a419-49ad-b721-6bb6729e6b59&mapfiled=fotos.jpeg&uf=es" alt="image description">
+                                                </a> 
+                                                <figcaption class="mt-2 text-sm text-center font-semibold text-neutral-dark dark:text-gray-400">Placa Dianteira</figcaption>
+                                            </figure> 
+                                            
+                                            <!-- Placa Traseira -->
+                                            <figure class="col-span-1 cursor-pointer">
+                                                <a class="spotlight block bg-stripes-gray rounded-2xl" href="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=35949090-e440-450e-8b3b-467aa12593eb&mapfiled=fotos.jpeg&uf=es">
+                                                    <img class="rounded-2xl object-cover w-full h-40" src="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=35949090-e440-450e-8b3b-467aa12593eb&mapfiled=fotos.jpeg&uf=es" alt="image description">
+                                                </a> 
+                                                <figcaption class="mt-2 text-sm text-center font-semibold text-neutral-dark dark:text-gray-400">Placa Traseira</figcaption>
+                                            </figure>  
+    
+                                            <figure class="col-span-1 cursor-pointer">
+                                                <a class="spotlight block bg-stripes-gray rounded-2xl" href="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=daae0fc4-e682-4063-9a69-ea0be3957ad6&mapfiled=fotos.jpeg&uf=es">
+                                                    <img class="rounded-2xl object-cover w-full h-40" src="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=daae0fc4-e682-4063-9a69-ea0be3957ad6&mapfiled=fotos.jpeg&uf=es" alt="image description">
+                                                </a> 
+                                                <figcaption class="mt-2 text-sm text-center font-semibold text-neutral-dark dark:text-gray-400">Chassi</figcaption>
+                                            </figure>
+                                            
+                                            <!-- Mais Itens -->
+
+                                            <figure class="col-span-1 cursor-pointer">
+                                                <a class="spotlight block bg-stripes-gray rounded-2xl" href="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=065977a3-ef95-4291-8fd2-bbfdd5a16a12&mapfiled=fotos.jpeg&uf=es">
+                                                    <img class="object-cover rounded-2xl w-full h-40" src="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=065977a3-ef95-4291-8fd2-bbfdd5a16a12&mapfiled=fotos.jpeg&uf=es" alt="QR DIANTEIRA">
+                                                </a>
+                                                <figcaption class="mt-2 text-sm text-center font-semibold text-neutral-dark dark:text-gray-400">QR Dianteira</figcaption>
+                                            </figure>
+    
+                                            <!-- QR TRASEIRA -->
+                                            <figure class="col-span-1 cursor-pointer">
+                                                <a class="spotlight block bg-stripes-gray rounded-2xl" href="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=f354015b-4852-4784-811c-9b247ab12e2a&mapfiled=fotos.jpeg&uf=es">
+                                                    <img class="rounded-2xl object-cover w-full h-40" src="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=f354015b-4852-4784-811c-9b247ab12e2a&mapfiled=fotos.jpeg&uf=es" alt="image description">
+                                                </a> 
+                                                <figcaption class="mt-2 text-sm text-center font-semibold text-neutral-dark dark:text-gray-400">QR Traseira</figcaption>
+                                            </figure>
+                                            
+                                            <!-- PLaca Dianteira -->
+                                            <figure class="col-span-1 cursor-pointer">
+                                                <a class="spotlight block bg-stripes-gray rounded-2xl" href="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=cce2d84f-a419-49ad-b721-6bb6729e6b59&mapfiled=fotos.jpeg&uf=es">
+                                                    <img class="rounded-2xl object-cover w-full h-40 " src="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=cce2d84f-a419-49ad-b721-6bb6729e6b59&mapfiled=fotos.jpeg&uf=es" alt="image description">
+                                                </a> 
+                                                <figcaption class="mt-2 text-sm text-center font-semibold text-neutral-dark dark:text-gray-400">Placa Dianteira</figcaption>
+                                            </figure> 
+                                            
+                                            <!-- Placa Traseira -->
+                                            <figure class="col-span-1 cursor-pointer">
+                                                <a class="spotlight block bg-stripes-gray rounded-2xl" href="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=35949090-e440-450e-8b3b-467aa12593eb&mapfiled=fotos.jpeg&uf=es">
+                                                    <img class="rounded-2xl object-cover w-full h-40" src="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=35949090-e440-450e-8b3b-467aa12593eb&mapfiled=fotos.jpeg&uf=es" alt="image description">
+                                                </a> 
+                                                <figcaption class="mt-2 text-sm text-center font-semibold text-neutral-dark dark:text-gray-400">Placa Traseira</figcaption>
+                                            </figure>  
+    
+                                            <figure class="col-span-1 cursor-pointer">
+                                                <a class="spotlight block bg-stripes-gray rounded-2xl" href="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=daae0fc4-e682-4063-9a69-ea0be3957ad6&mapfiled=fotos.jpeg&uf=es">
+                                                    <img class="rounded-2xl object-cover w-full h-40" src="http://evaac.wj.com.br/evasuporte/suporteWs/abrirAnexo?idPai=95d7dc6f-074c-4921-bb36-1298f8c013df&id=daae0fc4-e682-4063-9a69-ea0be3957ad6&mapfiled=fotos.jpeg&uf=es" alt="image description">
+                                                </a> 
+                                                <figcaption class="mt-2 text-sm text-center font-semibold text-neutral-dark dark:text-gray-400">Chassi</figcaption>
+                                            </figure>
+      
+                                        </div>
+
+                                    </section>
+
+                                </main>
+                                <footer>
+                                  
+                                </footer>
+                            </article>
+
+                            <!-- CARD FOTOS VALIDAÇÕES -->
+                            <article class="col-span-3 py-4 px-4 h-fit bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header class="h-fit w-full flex justify-between dropend">
+                                    <div class="flex items-center select-none">
+                                        <span class="material-symbols-sharp text-neutral-dark mr-2">
+                                            gallery_thumbnail
+                                        </span>
+                                        <span class="text-sm font-semibold text-neutral-dark">FOTOS VALIDAÇÕES</span>
+                                    </div>
+
+                                    <div>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Upload">
+                                            <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition" data-bs-toggle="modal" data-bs-target="#uploadValidacoes">upload</a>
+                                        </span>
+                                        
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
+                                            <a href="#" class="text-negative-light hover:bg-negative-lighter/50 rounded-full px-1.5 py-1 h-fit transition">close</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Salvar">
+                                            <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">save</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Editando...">
+                                            <a href="#" class="text-positive/70 hover:bg-positive-lighter/50 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
+                                        </span>
+                                        
+                                    </div>
+                                </header>
+    
+                                <main class="pt-4">
+
+                                    <section class="flex flex-col gap-6 w-full overflow-hidden text-gray-700">
+                                              
+                                        <!-- Fotos Validações -->
+                                        <div class="grid grid-cols-4 grid-rows-1 gap-6">
+
+                                            <!-- FOTO CONDUTOR -->
+                                            <figure class="col-span-2 cursor-pointer">
+                                                <a class="spotlight block bg-stripes-gray rounded-2xl" href="https://www.pinkvilla.com/files/madhavan_workout_pic.jpg">
+                                                    <img class="rounded-2xl object-cover w-full h-40" src="https://www.pinkvilla.com/files/madhavan_workout_pic.jpg" alt="Foto Condutor">
+                                                </a> 
+                                                <figcaption class="mt-2 text-sm text-center font-semibold text-neutral-dark dark:text-gray-400">Condutor</figcaption>
+                                            </figure> 
+
+                                            <!-- FOTO INSTALADOR -->
+                                            <figure class="col-span-2 cursor-pointer">
+                                                <a class="spotlight block bg-stripes-gray rounded-2xl" href="https://lh6.googleusercontent.com/-62kUE68CfnM/AAAAAAAAAAI/AAAAAAAAFxQ/BlMUML_vwy0/photo.jpg">
+                                                    <img class="rounded-2xl object-cover w-full h-40" src="https://lh6.googleusercontent.com/-62kUE68CfnM/AAAAAAAAAAI/AAAAAAAAFxQ/BlMUML_vwy0/photo.jpg" alt="Foto Instalador">
+                                                </a> 
+                                                <figcaption class="mt-2 text-sm text-center font-semibold text-neutral-dark dark:text-gray-400">Instalador</figcaption>
+                                            </figure> 
+                                            
+                                        </div> 
+
+                                    </section>
+
+                                </main>
+                                <footer>
+                                   
+                                </footer>
+                            </article>
 
                         </div>
 
@@ -968,6 +1329,100 @@
             
         </div>
         
+        <!-- Modal Validações -->
+        <div class="modal fade bg-gradient-to-r from-primary/70 to-info-light/70 backdrop-blur-md fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="uploadValidacoes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none transition-all">
+                <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-2xl outline-none text-current">
+                    <!-- Header Modal -->
+                    <div class="modal-header flex">
+                        
+                        <h5 class="text-xl font-semibold leading-normal text-neutral-dark flex items-center select-none" id="">
+                            <span class="material-symbols-sharp mr-2">upload</span>Validações
+                        </h5>
+                        <!-- <button type="button"
+                            class="btn-close box-content w-4 h-4 !pr-2.5 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+                            data-bs-dismiss="modal" aria-label="Close">
+                        </button> -->
+                    </div>
+                    <!-- Body Modal -->
+                    <div class="modal-body relative p-4 z-50">
+                        
+                        <div class="flex flex-col gap-6">
+
+                            <!-- Tipo de Validação -->
+                            <div class="col-span-3 relative">
+                                <button id="selectValidacoes" type="button" class="dropdown-toggle pl-3 pr-10 py-2 text-left peer input-floating" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="block truncate">Selecione</span>
+                                    <span class="material-symbols-sharp text-neutral-dark absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">expand_more</span>
+                                </button>
+                                
+                                <ul class="dropdown-menu hidden absolute inset-y-2 z-10 mt-1 w-full bg-white shadow-lg max-h-48 h-48 rounded-md text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none" aria-labelledby="selectValidacoes" >
+                                    
+                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="" role="option">
+                                        <span class="font-normal block truncate">Condutor</span>
+                                    </li>
+                                    
+                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="" role="option">
+                                    <span class="font-normal block truncate">Documento Condutor</span>
+                                    </li>
+
+                                    <li class="text-neutral-dark hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="" role="option">
+                                    <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+                                    <span class="font-semibold block truncate">Procuração</span>
+                                    <!-- Option Selected -->
+                                    <span class="material-symbols-sharp text-2xl text-primary absolute inset-y-0 right-0 flex items-center pr-4">
+                                        done
+                                    </span>
+                                    </li>
+
+                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="" role="option">
+                                    <span class="font-normal block truncate">Documento procurador</span>
+                                    </li>
+
+                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="" role="option">
+                                    <span class="font-normal block truncate">Instalador</span>
+                                    </li>
+
+                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="" role="option">
+                                    <span class="font-normal block truncate">Recebedor</span>
+                                    </li>
+
+                                </ul>
+                        
+                                <label for="" id="" class="label-floating">Tipo da Foto</label>
+                            </div>
+
+                            <div>
+                                <label class="flex justify-center w-full h-32 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
+                                    <span class="flex items-center space-x-2">
+                                        <span class="material-symbols-sharp text-neutral-dark">
+                                            cloud_upload
+                                        </span>
+                                        <span class="font-medium text-gray-600">
+                                            Solte arquivos para anexar, ou
+                                            <span class="text-blue-600 underline">navegue</span>
+                                        </span>
+                                    </span>
+                                    <input type="file" name="file_upload" class="hidden">
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- Footer Modal -->
+                    <div class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 rounded-b-md gap-2 ">
+                        <button type="button" class="rounded-button secondary-text-button" data-bs-dismiss="modal">
+                            cancelar
+                        </button>
+                        <button type="button" class="rounded-button primary-text-button">
+                            salvar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fim Modal -->
 
         <!-- Modal -->
         <div class="modal fade bg-neutral/50 fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="modal-teste" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
