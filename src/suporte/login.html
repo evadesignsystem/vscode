@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="antialiased">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@latest/dist/output.css" /> -->
+
+    <!-- spotlight cdn -->
+    <link rel="stylesheet" href="https://rawcdn.githack.com/nextapps-de/spotlight/0.7.8/dist/css/spotlight.min.css">
+    <script src="https://rawcdn.githack.com/nextapps-de/spotlight/0.7.8/dist/js/spotlight.min.js"></script>
+</head>
+
+<body class="bg-ambient-white dark:bg-zinc-darker/95 overflow-hidden">
+
+<main class="min-h-screen min-w-[1280px] flex justify-center items-center bg-ambient-white">
+
+    <div class="absolute w-60 h-60 rounded-xl bg-primary-light -top-5 -left-16 z-0 transform rotate-45 hidden lg:block">
+    </div>
+    <div class="absolute w-48 h-48 rounded-xl bg-primary-light -bottom-6 -right-10 transform rotate-12 hidden lg:block">
+    </div>
+    <div class="h-auto w-fit flex gap-4 p-4 bg-white rounded-2xl shadow-xl z-20">
+
+        <section class="flex flex-col justify-center items-center w-fit">
+
+            <!-- <div class="carousel-item active float-left w-full h-full">
+                <img
+                    src="../img/menuFerramentas.png"
+                    class="block w-auto h-auto shadow-2xl mb-24 mx-auto"
+                    alt="Wild Landscape" />
+                <div>
+                    <h3 class="text-white text-sm font-semibold mb-2 text-center">MENU FERRAMENTAS</h3>
+                    <p class="text-white text-sm text-center">
+                        O novo menu ferramentas foi pensado na centralização dos botões de ações
+                        do sistema. 
+                    </p>
+                </div>
+            </div> -->
+
+            <article class="w-[540px] h-[640px] bg-gradient-to-br from-positive-light/80 via-blue-500 to-purple-600 rounded-xl">
+
+                <div id="carouselExampleCrossfade" class="carousel slide  relative h-full" data-bs-ride="carousel">
+
+                    <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                        <button type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <div class="carousel-inner relative w-full h-full overflow-hidden flex">
+                        <div class="carousel-item active float-left w-full px-16 pb-10">
+                            <div class="grid h-full place-content-">
+
+                                <div class="grid place-content-center">
+                                    <img src="../img/menuFerramentas.png" class="block w-fit shadow-2xl" alt="Wild Landscape" />
+                                </div>
+
+                                <div class="flex flex-col gap-4 place-content-center">
+                                    <h3 class="text-white text-sm font-semibold mb-2 text-center">MENU FERRAMENTAS</h3>
+                                    <p class="text-white text-sm text-center">
+                                        O novo menu ferramentas foi pensado na centralização dos botões de ações
+                                        do sistema. 
+                                    </p>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <div class="carousel-item float-left w-full px-16 pb-10">
+                            <div class="grid h-full place-content-">
+
+                                <div class="grid place-content-center">
+                                    <img src="../img/cardProp.png" class="block w-fit shadow-2xl" alt="Wild Landscape" />
+                                </div>
+
+                                <div class="flex flex-col gap-4 place-content-center">
+                                    <h3 class="text-white text-sm font-semibold mb-2 text-center">CARDS</h3>
+                                    <p class="text-white text-sm text-center">
+                                        O novo menu ferramentas foi pensado na centralização dos botões de ações
+                                        do sistema. 
+                                    </p>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <div class="carousel-item float-left w-full px-16 pb-10">
+                            <div class="grid h-full place-content-">
+
+                                <div class="grid place-content-center">
+                                    <img src="../img/sidebar.png" class="block w-48 shadow-2xl" alt="Wild Landscape" />
+                                </div>
+
+                                <div class="flex flex-col gap-4 place-content-center">
+                                    <h3 class="text-white text-sm font-semibold mb-2 text-center">SIDEBAR</h3>
+                                    <p class="text-white text-sm text-center">
+                                        O novo menu ferramentas foi pensado na centralização dos botões de ações
+                                        do sistema. 
+                                    </p>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        
+                    </div>
+                    <button
+                        class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                        type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                        type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide="next">
+                        <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="flex flex-col justify-center items-center w-fit gap-8 px-20 py-12">
+            <header class="mb-6">
+                <img class="w-48" src="../img/logon-eva.png" alt="">
+                <!-- <p class="w-80 text-center text-sm mb-8 font-semibold text-gray-700 tracking-wide cursor-pointer">Create an
+                    account to enjoy all the services without any ads for free!</p> -->
+            </header>
+            <form class="w-72">
+                <div class="flex flex-col gap-4">
+                    <!-- Input Usuário -->
+                    <div class="w-full relative">
+                        <input id="" type="text" class="peer input-floating" placeholder="Usuário"/>
+                        <label for="" class="label-floating">Usuário</label>
+                    </div>
+        
+                    <!-- Input Senha -->
+                    <div class="w-full relative">
+                        <input id="password" type="password" class="peer input-floating" placeholder="Senha"/>
+                        <label for="password" class="label-floating disabled">Senha</label>
+                    </div>
+                </div>
+                <div class="flex flex-col mt-6 text-right">
+                    <button type="button" class="square-button primary-button justify-center" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                        <span class="material-symbols-sharp text-ambient-white mr-2">
+                            lock
+                        </span>acesso com senha
+                    </button>
+                    <p class="mt-4 text-sm underline cursor-pointer">Esqueceu a senha?</p>
+                </div>
+            </form>
+        </section>
+        
+    </div>
+    <div class="w-40 h-40 absolute bg-primary-light rounded-full top-0 right-12 hidden md:block"></div>
+	<div class="w-20 h-40 absolute bg-primary-light rounded-full bottom-20 left-10 transform rotate-45 hidden md:block"></div>
+ 
+</main>
+
+<script src="https://cdn.jsdelivr.net/gh/evadesignsystem/vscode@main/node_modules/tw-elements/dist/js/index.min.js"></script>
+</body>
+
+<!-- Required popper.js -->
+<script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new Tooltip(tooltipTriggerEl);
+    });
+  </script>
+
+</html>
