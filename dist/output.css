@@ -551,11 +551,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
 .container {
   width: 100%;
 }
@@ -590,10 +585,33 @@ video {
   }
 }
 
+:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 :disabled {
   border-style: none;
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+/* Barra de Rolagem */
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(232 242 243 / var(--tw-bg-opacity));
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 126 133 / var(--tw-bg-opacity));
 }
 
 /* MATERIAL SOLID */

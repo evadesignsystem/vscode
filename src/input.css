@@ -1,13 +1,22 @@
 @tailwind base;
+@tailwind components;
 
 :focus {
     @apply outline-none;
 }
-
-@tailwind components;
-
 :disabled {
     @apply bg-neutral-lighter border-none;
+}
+
+/* Barra de Rolagem */
+::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+::-webkit-scrollbar {
+    @apply w-2 bg-primary-lighter;
+}
+::-webkit-scrollbar-thumb {
+    @apply rounded-2xl bg-primary;
 }
 
 /* MATERIAL SOLID */

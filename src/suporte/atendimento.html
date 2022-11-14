@@ -310,7 +310,7 @@
                 <!-- ONEPAGE CONTENT // Conteúdo da Página Selecionada ( Todas as Seções da Página ) -->
                 <main class="-z-20 block mt-16 min-w-[1446px] h-[calc(100vh-128px)] snap-mandatory snap-y overflow-y-scroll scroll-smooth">
                     
-                    <section id="atendimento" class="w-[1366px] p-4 snap-start snap-always mx-auto ">
+                    <section id="atendimento" class="w-[1366px] p-4 snap-start snap-always mx-auto h-auto">
                         
                         <div class="grid grid-cols-8 gap-4 h-auto">
 
@@ -394,34 +394,33 @@
 
                                         <hr class="col-span-12 my-4 text-neutral-lighter">
 
-                                        <!-- Descarte das Placas -->
-                                        <div class="col-span-2 relative">
-                                            <select disabled id="descartePlacas" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Descarte">
-                                                <option value="1">Sim</option>
-                                                <option selected value="2">Não</option>
-                                            </select>
-                                            <label for="descartePlacas" class="label-floating">Descarte</label>
-                                        </div>
-
-                                        <!-- Procuração -->
-                                        <div class="col-span-2 relative">
-                                            <select disabled id="procuracao" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Procuração">
-                                                <option value="1">Sim</option>
-                                                <option selected value="2">Não</option>
-                                            </select>
-                                            <label for="procuracao" class="label-floating">Procuração</label>
-                                        </div>
-
                                         <!-- Nome do Cliente -->
-                                        <div class="col-span-3 relative">
-                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Nome do Cliente" value="Balcão"/>
+                                        <div class="col-span-6 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating truncate" placeholder="Nome do Cliente" value="MARQUINHO DESPACHANTE / VENDA NOVA DO IMIGRANTE"/>
                                             <label for="" class="label-floating">Nome do Cliente</label>
                                         </div>
 
-                                        <!-- Valor -->
+                                        <!-- Data do Agendamento -->
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Agendamento" value=" "/>
+                                            <label for="" class="label-floating">Data Agendamento</label>
+                                        </div>
+
+                                        <!-- Horário Agendado -->
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Horário Agendado" value=" "/>
+                                            <label for="" class="label-floating">Horário Agendado</label>
+                                        </div>
+
+                                        <!-- Quantidade de Placas -->
                                         <div class="col-span-2 relative">
-                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Valor" value="R$ 105,00"/>
-                                            <label for="" class="label-floating">Valor</label>
+                                            <select disabled id="" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Qtd Placas">
+                                                <option value="0">0</option>
+                                                <option selected value="1">01</option>
+                                                <option value="2">02</option>
+                                                <option value="3">03</option>
+                                            </select>
+                                            <label for="" class="label-floating">Qtd Placas</label>
                                         </div>
 
                                         <!-- Forma de Pagamento -->
@@ -474,30 +473,28 @@
                                       
                                             <label for="select" id="listbox-label" class="label-floating">Forma de Pagamento</label>
                                         </div>
-                                        <!-- <div class="col-span-3 relative">
-                                            <select disabled id="formaPagamento" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Forma de Pagamento">
-                                                <option value="1">Boleto</option>
-                                                <option value="2">Dinheiro</option>
-                                                <option value="3">Cartão de Crédito</option>
-                                                <option value="4">Cartão de Débito</option>
-                                                <option value="5">Contra Apresentação</option>
-                                                <option value="6">Cartão Web</option>
-                                                <option value="7">Account Money</option>
-                                                <option value="8">Transferência</option>
-                                                <option selected value="9">Pix</option>
-                                            </select>
-                                            <label for="formaPagamento" class="label-floating">Forma de Pagamento</label>
-                                        </div> -->
 
-                                        <!-- Quantidade de Placas -->
+                                        <!-- Valor -->
                                         <div class="col-span-2 relative">
-                                            <select disabled id="" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Qtd Placas">
-                                                <option value="0">0</option>
-                                                <option selected value="1">01</option>
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Valor" value="R$ 105,00"/>
+                                            <label for="" class="label-floating">Valor</label>
+                                        </div>
+
+                                        <!-- Data Envio Detran -->
+                                        <div class="col-span-3 relative">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Envio Detran" value="16/02/2022 15:38:22"/>
+                                            <label for="" class="label-floating">Data Envio Detran</label>
+                                        </div>
+
+                                        <!-- Envio DETRAN -->
+                                        <div class="col-span-2 relative">
+                                            <select disabled id="" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Envio Detran">
+                                                <option selected value="0">0</option>
+                                                <option value="1">01</option>
                                                 <option value="2">02</option>
                                                 <option value="3">03</option>
                                             </select>
-                                            <label for="" class="label-floating">Qtd Placas</label>
+                                            <label for="" class="label-floating">Envio Detran</label>
                                         </div>
 
                                         <!-- Fase -->
@@ -534,17 +531,6 @@
                                             <label for="" class="label-floating">Situação</label>
                                         </div>
 
-                                        <!-- Envio DETRAN -->
-                                        <div class="col-span-2 relative">
-                                            <select disabled id="" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Envio Detran">
-                                                <option selected value="0">0</option>
-                                                <option value="1">01</option>
-                                                <option value="2">02</option>
-                                                <option value="3">03</option>
-                                            </select>
-                                            <label for="" class="label-floating">Envio Detran</label>
-                                        </div>
-
                                         <!-- Foto Pendente -->
                                         <div class="col-span-2 relative">
                                             <select disabled id="" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Foto Pendente">
@@ -555,25 +541,25 @@
                                             <label for="" class="label-floating">Foto Pendente</label>
                                         </div>
 
-                                        <!-- Data Envio Detran -->
-                                        <div class="col-span-3 relative">
-                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Envio Detran" value="16/02/2022 15:38:22"/>
-                                            <label for="" class="label-floating">Data Envio Detran</label>
+                                        <!-- Descarte das Placas -->
+                                        <div class="col-span-2 relative">
+                                            <select disabled id="descartePlacas" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Descarte">
+                                                <option value="1">Sim</option>
+                                                <option selected value="2">Não</option>
+                                            </select>
+                                            <label for="descartePlacas" class="label-floating">Descarte</label>
                                         </div>
 
-                                        <!-- ABA SLOTS MIGROU PARA ATENDIMENTO -->
-
-                                        <!-- Data do Agendamento -->
-                                        <div class="col-span-3 relative">
-                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Agendamento" value=" "/>
-                                            <label for="" class="label-floating">Data Agendamento</label>
+                                        <!-- Procuração -->
+                                        <div class="col-span-2 relative">
+                                            <select disabled id="procuracao" class="form-select peer input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Procuração">
+                                                <option value="1">Sim</option>
+                                                <option selected value="2">Não</option>
+                                            </select>
+                                            <label for="procuracao" class="label-floating">Procuração</label>
                                         </div>
 
-                                        <!-- Horário Agendado -->
-                                        <div class="col-span-3 relative">
-                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Horário Agendado" value=" "/>
-                                            <label for="" class="label-floating">Horário Agendado</label>
-                                        </div>
+                                        
 
                                     </div>
                                     
@@ -879,7 +865,7 @@
                            
                     </section>
 
-                    <section id="localizacao" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full hidden">
+                    <section id="localizacao" class="w-[1366px] p-4 snap-start snap-always mx-auto h-auto">
 
                         <div class="grid grid-cols-8 gap-4 h-auto">
 
@@ -1079,9 +1065,7 @@
                             <main class="pt-4">
                                 <div class="grid grid-cols-12 gap-6">
 
-
                                     <iframe class="col-span-12 w-full " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.5662344772145!2d-43.37817947059981!3d-23.0029728989841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdbae11ac6195%3A0x7877669bde544237!2sAv.%20General%20Olyntho%20Pillar%2C%20300%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022793-610%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1667597489784!5m2!1spt-BR!2sus" width="600" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
 
                                 </div>
                                 
@@ -1097,7 +1081,7 @@
 
                     </section>
 
-                    <section id="loja" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full hidden">
+                    <section id="loja" class="w-[1366px] p-4 snap-start snap-always mx-auto h-auto hidden">
                         
                         <div class="grid grid-cols-8 gap-4 h-auto">
 
@@ -1107,7 +1091,7 @@
 
                     </section>
 
-                    <section id="pagamento" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full hidden">
+                    <section id="pagamento" class="w-[1366px] p-4 snap-start snap-always mx-auto h-auto hidden">
                         
                         <div class="grid grid-cols-8 gap-4 h-auto">
 
@@ -1117,7 +1101,7 @@
 
                     </section>
 
-                    <section id="fotos" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full">
+                    <section id="fotos" class="w-[1366px] p-4 snap-start snap-always mx-auto h-auto">
                         
                         <div class="grid grid-cols-8 gap-4 h-fit">
 
@@ -1314,7 +1298,7 @@
 
                     </section>
 
-                    <section id="integracoes" class="w-[1366px] p-4 snap-start snap-always mx-auto h-full">
+                    <section id="integracoes" class="w-[1366px] p-4 snap-start snap-always mx-auto h-auto">
                         
                         <div class="grid grid-cols-8 gap-4 h-auto">
 
