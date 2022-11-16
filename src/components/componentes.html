@@ -29,7 +29,7 @@
 </nav>
 
 <div class="flex flex-wrap gap-4 min-h-full w-full">
-
+    <p title="Hi">Text</p>
     <!-- Input Text -->
     <div class="w-72 relative">
         <input id="username" type="text" class="peer input-floating" placeholder="Username"/>
@@ -41,6 +41,17 @@
         <input id="password" type="password" class="peer input-floating" placeholder="password"/>
         <label for="password" class="label-floating disabled">Password</label>
     </div>
+
+    <div class="relative w-72" relative>
+        <input list="tests" id="test" type="text" class="peer input-floating" placeholder="Forma de Pagamento">
+        <label for="test" class="label-floating">Forma de Pagamento</label>
+        <datalist id="tests">
+            <option value="FORMA DE PAGAMENTO">
+            <option value="Pix">
+            <option value="Boleto">
+            <option value="Cartão de Crédito">
+        </datalist>
+      </div>
 
     <!-- Buttons -->
 
@@ -85,10 +96,39 @@
 
 
     <div class="mb-4 col-span-2">
-        <button type="button" class="rounded-button primary-button" data-mdb-ripple="true" data-mdb-ripple-color="light" data-bs-toggle="modal" data-bs-target="#modal-teste">
+        <button type="button" class="rounded-button primary-button" data-mdb-ripple="true" data-mdb-ripple-color="light" data-bs-toggle="modal" data-bs-target="#modal-alert">
             <i class="fa-solid fa-trash-can mr-3"></i>
         primary button
         </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto bg-warning-lighter/30 backdrop-filter backdrop-blur" id="modal-alert" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none">
+            <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-2xl outline-none text-current">
+                <!-- Header Modal -->
+                <div class="modal-header bg-warning-lighter/70 rounded-t-2xl">
+                    <h5 class="w-full flex items-center ml-2 text-xl font-semibold leading-normal text-warning-darker" id="">
+                        <span class="material-symbols-sharp text-4xl mr-4">
+                            warning
+                        </span>Alerta
+                    </h5>
+                </div>
+                <!-- Body Modal -->
+                <div class="modal-body relative p-4 font-semibold text-neutral">
+                    <p>This is a vertically centered modal.</p>
+                </div>
+                <!-- Footer Modal -->
+                <div class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 rounded-b-md gap-2 ">
+                    <button type="button" class="rounded-button text-button-negative" data-bs-dismiss="modal">
+                        ok
+                    </button>
+                    <!-- <button type="button" class="rounded-button primary-text-button">
+                        salvar
+                    </button> -->
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Modal -->
@@ -97,7 +137,7 @@
             <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-2xl outline-none text-current">
                 <!-- Header Modal -->
                 <div class="modal-header">
-                    <h5 class="text-xl font-semibold leading-normal text-gray-800" id="exampleModalScrollableLabel">Modal title</h5>
+                    <h5 class="text-xl font-semibold leading-normal text-gray-800" id="">Modal title</h5>
                     <button type="button"
                         class="btn-close box-content w-4 h-4 !pr-2.5 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
                         data-bs-dismiss="modal" aria-label="Close">
@@ -119,21 +159,11 @@
             </div>
         </div>
     </div>
-    <!-- Fim Modal -->
-
 </div>
 
 
 
-  <div class="mb-3 w-72" relative>
-    <select class="form-select input-floating bg-clip-padding bg-no-repeat appearance-none focus:shadow-none" aria-label="Default select example" placeholder="Forma de Pagamento">
-        <option value="0">Forma de Pagamento</option>
-        <option value="1">Pix</option>
-        <option value="2">Boleto</option>
-        <option value="3">Cartão de Crédito</option>
-    </select>
-    <label for="" class="label-floating">Forma de Pagamento</label>
-  </div>
+ 
 
 
 <!----------------------------------------------------------------------------------------->

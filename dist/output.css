@@ -797,6 +797,90 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-button-warning {
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(138 106 22 / var(--tw-text-opacity));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.text-button-warning:hover {
+  background-color: rgb(252 237 199 / 0.7);
+}
+
+.text-button-warning:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 237 199 / var(--tw-bg-opacity));
+}
+
+.text-button-info {
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(13 68 108 / var(--tw-text-opacity));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.text-button-info:hover {
+  background-color: rgb(194 229 255 / 0.7);
+}
+
+.text-button-info:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(194 229 255 / var(--tw-bg-opacity));
+}
+
+.text-button-negative {
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(129 34 34 / var(--tw-text-opacity));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.text-button-negative:hover {
+  background-color: rgb(255 229 229 / 0.7);
+}
+
+.text-button-negative:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 229 229 / var(--tw-bg-opacity));
+}
+
+.text-button-positive {
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(6 95 70 / var(--tw-text-opacity));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.text-button-positive:hover {
+  background-color: rgb(209 250 229 / 0.7);
+}
+
+.text-button-positive:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 250 229 / var(--tw-bg-opacity));
+}
+
 /* INPUTS */
 
 .input-floating {
@@ -1282,6 +1366,14 @@ video {
   margin-left: auto;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -1348,6 +1440,10 @@ video {
 
 .table {
   display: table;
+}
+
+.flow-root {
+  display: flow-root;
 }
 
 .grid {
@@ -1780,6 +1876,11 @@ video {
   border-radius: 0.125rem;
 }
 
+.rounded-t-2xl {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
 .rounded-b-md {
   border-bottom-right-radius: 0.375rem;
   border-bottom-left-radius: 0.375rem;
@@ -1959,9 +2060,17 @@ video {
   background-color: rgb(195 199 199 / 0.25);
 }
 
+.bg-warning-lighter\/30 {
+  background-color: rgb(252 237 199 / 0.3);
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-warning-lighter\/70 {
+  background-color: rgb(252 237 199 / 0.7);
 }
 
 .bg-transparent {
@@ -2214,6 +2323,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -2269,6 +2383,11 @@ video {
 
 .text-current {
   color: currentColor;
+}
+
+.text-warning-darker {
+  --tw-text-opacity: 1;
+  color: rgb(138 106 22 / var(--tw-text-opacity));
 }
 
 .text-black {

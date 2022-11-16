@@ -58,7 +58,18 @@
 .secondary-text-button{
     @apply text-secondary font-semibold antialiased hover:bg-secondary-lighter active:bg-secondary active:text-white transition-all ease-out duration-200;
 }
-
+.text-button-warning{
+    @apply text-warning-darker font-semibold antialiased hover:bg-warning-lighter/70 active:bg-warning-lighter transition-all ease-out duration-200;
+}
+.text-button-info{
+    @apply text-info-darker font-semibold antialiased hover:bg-info-lighter/70 active:bg-info-lighter transition-all ease-out duration-200;
+}
+.text-button-negative{
+    @apply text-negative-darker font-semibold antialiased hover:bg-negative-lighter/70 active:bg-negative-lighter transition-all ease-out duration-200;
+}
+.text-button-positive{
+    @apply text-positive-darker font-semibold antialiased hover:bg-positive-lighter/70 active:bg-positive-lighter transition-all ease-out duration-200;
+}
 
 /* INPUTS */
 .input-floating {
