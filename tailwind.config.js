@@ -12,7 +12,7 @@ module.exports = {
       white: colors.white,
       
       purple: colors.purple,
-      pink: colors.pink,
+      red: colors.red,
       indigo: colors.indigo,
       blue: colors.blue,
       sky: colors.sky,
@@ -92,7 +92,6 @@ module.exports = {
         'xl': '1700px',
         // => @media (min-width: 992px) { ... }
       },
-
       fontFamily: {
         sans: ["Raleway", "sans-serif"],
       },
