@@ -310,7 +310,7 @@
                 <!-- ONEPAGE CONTENT // Conteúdo da Página Selecionada ( Todas as Seções da Página ) -->
                 <main class="-z-20 flow-root mt-16 min-w-[1446px] h-[calc(100vh-128px)] snap-mandatory snap-y overflow-y-scroll scroll-smooth">
                     
-                    <section id="atendimento" class="w-[1366px] p-4 snap-start snap-always mx-auto h-auto hidden">
+                    <section id="atendimento" class="w-[1366px] p-4 snap-start snap-always mx-auto h-auto ">
                         
                         <div class="grid grid-cols-8 gap-4 h-auto">
 
@@ -1166,305 +1166,255 @@
                         
                         <div class="grid grid-cols-8 gap-4 h-full">
 
-                            <div class="grid col-span-5 h-full gap-4">
-                                <!-- CARD BOLETO -->
-                                <article class="col-span-5 h-fit py-4 px-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
-                                    <header class="h-fit w-full flex justify-between dropend">
-                                        <div class="flex items-center select-none">
-                                            <span class="material-symbols-sharp text-neutral-dark mr-2">
-                                                barcode
-                                            </span>
-                                            <span class="text-sm font-semibold text-neutral-dark">BOLETO</span>
+                            <!-- CARD BOLETO -->
+                            <article class="col-span-4 h-fit py-4 px-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header class="h-fit w-full flex justify-between dropend">
+                                    <div class="flex items-center select-none">
+                                        <span class="material-symbols-sharp text-neutral-dark mr-2">
+                                            barcode
+                                        </span>
+                                        <span class="text-sm font-semibold text-neutral-dark">BOLETO</span>
+                                    </div>
+                                    <div>
+                                        <span class="material-symbols-sharp" data-bs-toggle="modal" data-bs-target="#modal-invoice">
+                                            <a href="#" type="button" id="" data-bs-toggle="tooltip" title="Lista de Boletos" class="text-neutral hover:bg-neutral-light/30 rounded-full p-[8px] h-fit transition" >list_alt</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp">
+                                            <a href="#"  type="button" id="" data-bs-toggle="tooltip" title="Descartar" class="text-negative-light hover:bg-negative-lighter/50 rounded-full p-[8px] h-fit transition">close</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp">
+                                            <a href="#" type="button" id="" data-bs-toggle="tooltip" title="Salvar" class="text-neutral hover:bg-neutral-light/30 rounded-full p-[8px] h-fit transition">save</a>
+                                        </span>
+
+                                        <span class="material-symbols-sharp">
+                                            <a href="#" type="button" id="" data-bs-toggle="tooltip" title="Editando..." class="text-positive/70 hover:bg-positive-lighter/50 rounded-full p-[8px] h-fit transition">lock_open</a>
+                                        </span> 
+                                    </div>
+                                </header>
+    
+                                <main class="pt-4">
+    
+                                    <div class="grid grid-cols-8 gap-6">
+
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Nº Boleto" value="51305120269"/>
+                                            <label for="" class="label-floating">Nº Boleto</label>
                                         </div>
-                                        <div>
-                                            <span class="material-symbols-sharp" data-bs-toggle="modal" data-bs-target="#modal-invoice">
-                                                <a href="#" type="button" id="" data-bs-toggle="tooltip" title="Lista de Boletos" class="text-neutral hover:bg-neutral-light/30 rounded-full p-[8px] h-fit transition" >list_alt</a>
-                                            </span>
 
-                                            <span class="material-symbols-sharp">
-                                                <a href="#"  type="button" id="" data-bs-toggle="tooltip" title="Descartar" class="text-negative-light hover:bg-negative-lighter/50 rounded-full p-[8px] h-fit transition">close</a>
-                                            </span>
+                                        <div class="relative col-span-6">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Nome" value="CARLOS ALBERTO FIOROTTI"/>
+                                            <label for="" class="label-floating">Nome</label>
+                                        </div>
 
-                                            <span class="material-symbols-sharp">
-                                                <a href="#" type="button" id="" data-bs-toggle="tooltip" title="Salvar" class="text-neutral hover:bg-neutral-light/30 rounded-full p-[8px] h-fit transition">save</a>
-                                            </span>
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Status" value="1"/>
+                                            <label for="" class="label-floating">Status</label>
+                                        </div>
 
-                                            <span class="material-symbols-sharp">
-                                                <a href="#" type="button" id="" data-bs-toggle="tooltip" title="Editando..." class="text-positive/70 hover:bg-positive-lighter/50 rounded-full p-[8px] h-fit transition">lock_open</a>
-                                            </span>
+                                        <div class="relative col-span-4">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Nome" value="amfiorotti@hotmail.com"/>
+                                            <label for="" class="label-floating">E-mail</label>
+                                        </div>
+
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Fase" value="0"/>
+                                            <label for="" class="label-floating">Fase</label>
+                                        </div>
+
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Valor" value="181,57"/>
+                                            <label for="" class="label-floating">Valor</label>
+                                        </div>
+
+                                        <!-- Tipo de Pagamento -->
+                                        <div class="col-span-3 relative">
+                                            <button id="tipoPagamento" type="button" class="dropdown-toggle pl-3 pr-10 py-2 text-left peer input-floating" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="block truncate">Pix PagSeguro</span>
+                                            <span class="material-symbols-sharp text-neutral-dark absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">expand_more</span>
+                                            </button>
                                             
-                                        </div>
-                                    </header>
-        
-                                    <main class="pt-4">
-        
-                                        <div class="grid grid-cols-8 gap-6">
-
-                                            <div class="relative col-span-2">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Nº Boleto" value="51305120269"/>
-                                                <label for="" class="label-floating">Nº Boleto</label>
-                                            </div>
-
-                                            <div class="relative col-span-6">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Nome" value="CARLOS ALBERTO FIOROTTI"/>
-                                                <label for="" class="label-floating">Nome</label>
-                                            </div>
-
-                                            <div class="relative col-span-2">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Status" value="1"/>
-                                                <label for="" class="label-floating">Status</label>
-                                            </div>
-
-                                            <div class="relative col-span-4">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Nome" value="amfiorotti@hotmail.com"/>
-                                                <label for="" class="label-floating">E-mail</label>
-                                            </div>
-
-                                            <div class="relative col-span-2">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Fase" value="0"/>
-                                                <label for="" class="label-floating">Fase</label>
-                                            </div>
-
-                                            <div class="relative col-span-2">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Valor" value="181,57"/>
-                                                <label for="" class="label-floating">Valor</label>
-                                            </div>
-
-                                            <!-- Tipo de Pagamento -->
-                                            <div class="col-span-3 relative">
-                                                <button id="tipoPagamento" type="button" class="dropdown-toggle pl-3 pr-10 py-2 text-left peer input-floating" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span class="block truncate">Pix PagSeguro</span>
-                                                <span class="material-symbols-sharp text-neutral-dark absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">expand_more</span>
-                                                </button>
+                                            <ul class="dropdown-menu hidden absolute inset-y-2 z-10 mt-1 w-[-webkit-fill-available] bg-white shadow-lg max-h-48 h-48 rounded-md text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none" aria-labelledby="tipoPagamento" >
                                                 
-                                                <ul class="dropdown-menu hidden absolute inset-y-2 z-10 mt-1 w-[-webkit-fill-available] bg-white shadow-lg max-h-48 h-48 rounded-md text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none" aria-labelledby="tipoPagamento" >
-                                                    
-                                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-1" role="option">
-                                                        <span class="font-normal block truncate">Pix BluPay</span>
-                                                    </li>
-                                                    
-                                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-2" role="option">
-                                                    <span class="font-normal block truncate">Pix Mercado Pago</span>
-                                                    </li>
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-1" role="option">
+                                                    <span class="font-normal block truncate">Pix BluPay</span>
+                                                </li>
+                                                
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-2" role="option">
+                                                <span class="font-normal block truncate">Pix Mercado Pago</span>
+                                                </li>
 
-                                                    <li class="text-neutral-dark hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-3" role="option">
-                                                        <span class="font-semibold block truncate">Pix PagSeguro</span>
-                                                        <!-- Option Selected -->
-                                                        <span class="material-symbols-sharp text-2xl text-primary absolute inset-y-0 right-0 flex items-center pr-4">
-                                                            done
-                                                        </span>
-                                                    </li>
+                                                <li class="text-neutral-dark hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-3" role="option">
+                                                    <span class="font-semibold block truncate">Pix PagSeguro</span>
+                                                    <!-- Option Selected -->
+                                                    <span class="material-symbols-sharp text-2xl text-primary absolute inset-y-0 right-0 flex items-center pr-4">
+                                                        done
+                                                    </span>
+                                                </li>
 
-                                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-4" role="option">
-                                                        <span class="font-normal block truncate">Débito MasterCard</span>
-                                                    </li>
-                                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-10" role="option">
-                                                        <span class="font-normal block truncate">Débito Visa</span>
-                                                    </li>
-                                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-11" role="option">
-                                                        <span class="font-normal block truncate">Débito Elo</span>
-                                                    </li>
-                                                    
-                                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-7" role="option">
-                                                        <span class="font-normal block truncate">Crédito PagSeguro</span>
-                                                    </li>
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-4" role="option">
+                                                    <span class="font-normal block truncate">Débito MasterCard</span>
+                                                </li>
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-10" role="option">
+                                                    <span class="font-normal block truncate">Débito Visa</span>
+                                                </li>
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-11" role="option">
+                                                    <span class="font-normal block truncate">Débito Elo</span>
+                                                </li>
+                                                
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-7" role="option">
+                                                    <span class="font-normal block truncate">Crédito PagSeguro</span>
+                                                </li>
 
-                                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-8" role="option">
-                                                        <span class="font-normal block truncate">Master</span>
-                                                    </li>
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-8" role="option">
+                                                    <span class="font-normal block truncate">Master</span>
+                                                </li>
 
-                                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-12" role="option">
-                                                        <span class="font-normal block truncate">Visa</span>
-                                                    </li>
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-12" role="option">
+                                                    <span class="font-normal block truncate">Visa</span>
+                                                </li>
 
-                                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-13" role="option">
-                                                        <span class="font-normal block truncate">Elo</span>
-                                                    </li>
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-13" role="option">
+                                                    <span class="font-normal block truncate">Elo</span>
+                                                </li>
 
-                                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-14" role="option">
-                                                    <span class="font-normal block truncate">Boleto BluPay</span>
-                                                    </li>
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-14" role="option">
+                                                <span class="font-normal block truncate">Boleto BluPay</span>
+                                                </li>
 
-                                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-5" role="option">
-                                                    <span class="font-normal block truncate">Boleto Mercado Pago</span>
-                                                    </li>
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-5" role="option">
+                                                <span class="font-normal block truncate">Boleto Mercado Pago</span>
+                                                </li>
 
-                                                    <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-6" role="option">
-                                                    <span class="font-normal block truncate">Boleto Bradesco</span>
-                                                    </li>
+                                                <li class="text-gray-900 hover:bg-primary-lighter cursor-default select-none relative py-2 pl-3 pr-9" id="list-option-6" role="option">
+                                                <span class="font-normal block truncate">Boleto Bradesco</span>
+                                                </li>
 
-                                                </ul>
+                                            </ul>
+                                    
+                                            <label for="select" id="listbox-label1" class="label-floating">Forma de Pagamento</label>
+                                        </div>
+
+                                        <div class="relative col-span-3">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Criação" value="08/11/2022 19:58:14"/>
+                                            <label for="" class="label-floating">Data Criação</label>
+                                        </div>
+
+                                        <div class="relative col-span-8">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Descrição" value="null"/>
+                                            <label for="" class="label-floating">Descrição</label>
+                                        </div>
+
+                                        <div class="relative col-span-3">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Vencimento" value="08/11/2022 19:58:14"/>
+                                            <label for="" class="label-floating">Data Vencimento</label>
+                                        </div>
+
+                                        <div class="relative col-span-3">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Pagamento" value="08/11/2022 19:58:14"/>
+                                            <label for="" class="label-floating">Data Pagamento</label>
+                                        </div>
+
+                                    </div>
                                         
-                                                <label for="select" id="listbox-label1" class="label-floating">Forma de Pagamento</label>
-                                            </div>
+                                </main>
+                                <footer>
+                                    <!-- <div>
+                                        <button type="button" class="square-button primary-button w-" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                            secondary button
+                                        </button>
+                                    </div> -->
+                                </footer>
+                            </article>
+                            <!-- CARD NOTA FISCAL -->
+                            <article class="col-span-4 h-fit py-4 px-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
+                                <header class="h-fit w-full flex justify-between dropend">
+                                    <div class="flex items-center select-none">
+                                        <span class="material-symbols-sharp text-neutral-dark mr-2">
+                                            receipt
+                                        </span>
+                                        <span class="text-sm font-semibold text-neutral-dark">NOTA FISCAL</span>
+                                    </div>
+                                    <div>
+                                        <span class="material-symbols-sharp" data-bs-toggle="modal" data-bs-target="#jsonEnvio">
+                                            <a href="#" type="button" id="" data-bs-toggle="tooltip" title="JSON Envio" class="text-neutral hover:bg-neutral-light/30 rounded-full p-[8px] h-fit transition">data_object</a>
+                                        </span>
 
-                                            <div class="relative col-span-3">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Criação" value="08/11/2022 19:58:14"/>
-                                                <label for="" class="label-floating">Data Criação</label>
-                                            </div>
+                                        <span class="material-symbols-sharp">
+                                            <a href="#"  type="button" id="" data-bs-toggle="tooltip" title="Descartar" class="text-negative-light hover:bg-negative-lighter/50 rounded-full p-[8px] h-fit transition">close</a>
+                                        </span>
 
-                                            <div class="relative col-span-8">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Descrição" value="null"/>
-                                                <label for="" class="label-floating">Descrição</label>
-                                            </div>
+                                        <span class="material-symbols-sharp">
+                                            <a href="#" type="button" id="" data-bs-toggle="tooltip" title="Salvar" class="text-neutral hover:bg-neutral-light/30 rounded-full p-[8px] h-fit transition">save</a>
+                                        </span>
 
-                                            <div class="relative col-span-3">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Vencimento" value="08/11/2022 19:58:14"/>
-                                                <label for="" class="label-floating">Data Vencimento</label>
-                                            </div>
-
-                                            <div class="relative col-span-3">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Pagamento" value="08/11/2022 19:58:14"/>
-                                                <label for="" class="label-floating">Data Pagamento</label>
-                                            </div>
-
+                                        <span class="material-symbols-sharp">
+                                            <a href="#" type="button" id="" data-bs-toggle="tooltip" title="Editando..." class="text-positive/70 hover:bg-positive-lighter/50 rounded-full p-[8px] h-fit transition">lock_open</a>
+                                        </span> 
+                                    </div>
+                                </header>
+    
+                                <main class="pt-4">
+    
+                                    <div class="grid grid-cols-8 gap-6">
+    
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="ID Externo" value="5715"/>
+                                            <label for="" class="label-floating">ID externo</label>
                                         </div>
-                                            
-                                    </main>
-                                    <footer>
-                                        <!-- <div>
-                                            <button type="button" class="square-button primary-button w-" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                                                secondary button
-                                            </button>
-                                        </div> -->
-                                    </footer>
-                                </article>
-                                <!-- CARD NOTA FISCAL -->
-                                <article class="col-span-5 h-full py-4 px-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
-                                    <header class="h-fit w-full flex justify-between dropend">
-                                        <div class="flex items-center select-none">
-                                            <span class="material-symbols-sharp text-neutral-dark mr-2">
-                                                receipt
-                                            </span>
-                                            <span class="text-sm font-semibold text-neutral-dark">NOTA FISCAL</span>
-                                        </div>
-                                        <div>
-                                            <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
-                                                <a href="#" class="text-negative-light hover:bg-negative-lighter/50 rounded-full px-1.5 py-1 h-fit transition">close</a>
-                                            </span>
-        
-                                            <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Salvar">
-                                                <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">save</a>
-                                            </span>
-        
-                                            <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Editando...">
-                                                <a href="#" class="text-positive/70 hover:bg-positive-lighter/50 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
-                                            </span>
-                                            
-                                        </div>
-                                    </header>
-        
-                                    <main class="pt-4">
-        
-                                        <div class="grid grid-cols-12 gap-6">
-        
-                                            <div class="relative col-span-2">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="ID Externo" value="5715"/>
-                                                <label for="" class="label-floating">ID externo</label>
-                                            </div>
-        
-                                            <div class="relative col-span-7">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Chave de Acesso" value="32221130845107000100550010000057151000057168"/>
-                                                <label for="" class="label-floating">Chave de Acesso</label>
-                                            </div>
-        
-                                            <div class="relative col-span-3">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Criação" value="08/11/2022 19:58:14"/>
-                                                <label for="" class="label-floating">Data Criação</label>
-                                            </div>
-        
-                                            <div class="relative col-span-10">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Motivo" value="null"/>
-                                                <label for="" class="label-floating">Motivo</label>
-                                            </div>
-        
-                                            <div class="relative col-span-2">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Autorizado" value="1"/>
-                                                <label for="" class="label-floating">Autorizado</label>
-                                            </div>
-        
-                                            <div class="relative col-span-12">
-                                                <input disabled  id="" type="text" class="peer input-floating truncate" placeholder="Link XML" value="https://mg.promacplus.com.br/eva/notaFiscal/getXml?id=f6c1efa1-369e-45c9-a68e-160f7447285f"/>
-                                                <label for="" class="label-floating">Link XML</label>
-                                            </div>
-        
-                                            <div class="relative col-span-12">
-                                                <input disabled  id="" type="text" class="peer input-floating truncate" placeholder="Link DANFE" value="https://mg.promacplus.com.br/eva/notaFiscal/getDANFE?id=f6c1efa1-369e-45c9-a68e-160f7447285f"/>
-                                                <label for="" class="label-floating">Link DANFE</label>
-                                            </div>
-        
-                                            <div class="relative col-span-4">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Ultima NF-e" value="null"/>
-                                                <label for="" class="label-floating">Ultima NF-e</label>
-                                            </div>
-        
-                                            <div class="relative col-span-4">
-                                                <input disabled  id="" type="text" class="peer input-floating" placeholder="Ultima NFC-e" value="null"/>
-                                                <label for="" class="label-floating">Ultima NFC-e</label>
-                                            </div>
-        
-                                        </div>
-                                            
-                                    </main>
-                                    <footer>
-                                        <!-- <div>
-                                            <button type="button" class="square-button primary-button w-" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                                                secondary button
-                                            </button>
-                                        </div> -->
-                                    </footer>
-                                </article>
-                            </div>
-                            
-                            <div class="grid col-span-3">
-                                <!-- CARD JSON -->
-                                <article class="col-span-3 py-4 px-4 bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300">
-                                    <header class="h-fit w-full flex justify-between dropend">
-                                        <div class="flex items-center select-none">
-                                            <span class="material-symbols-sharp text-neutral-dark mr-2">
-                                                receipt
-                                            </span>
-                                            <span class="text-sm font-semibold text-neutral-dark">JSON</span>
-                                        </div>
-                                        <div>
-                                            <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Descartar">
-                                                <a href="#" class="text-negative-light hover:bg-negative-lighter/50 rounded-full px-1.5 py-1 h-fit transition">close</a>
-                                            </span>
 
-                                            <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Salvar">
-                                                <a href="#" class="text-neutral hover:bg-neutral-light/30 rounded-full px-1.5 py-1 h-fit transition">save</a>
-                                            </span>
-
-                                            <span class="material-symbols-sharp" type="button" id="" data-bs-toggle="tooltip" title="Editando...">
-                                                <a href="#" class="text-positive/70 hover:bg-positive-lighter/50 rounded-full px-1.5 py-1 h-fit transition">lock_open</a>
-                                            </span>
-                                            
+                                        <div class="relative col-span-6">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Chave de Acesso" value="32221130845107000100550010000057151000057168"/>
+                                            <label for="" class="label-floating">Chave de Acesso</label>
                                         </div>
-                                    </header>
-        
-                                    <main class="pt-4">
-        
-                                        <div class="grid grid-cols-8 gap-6">
 
-                                            <div class="relative col-span-8">
-                                                <textarea disabled  id="" class="peer input-floating" rows="28" placeholder="JSON Envio">
-                                                    {"id":"82776173110","ambienteEmissao":"Producao","naturezaOperacao":"Venda","finalidade":"Normal","consumidorFinal":true,"indicadorPresencaConsumidor":"OperacaoPresencial","desconto":0.0,"descontounitario":0.0,"cliente":{"tipoPessoa":"F","indicadorContribuinteICMS":"NaoContribuinte","nome":"CARLOS ALBERTO FIOROTTI","email":"pedido.centraldasplacas@gmail.com","telefone":null,"cpfCnpj":"47875925720","inscricaoMunicipal":null,"inscricaoEstadual":"","endereco":{"pais":"Brasil","uf":"ES","cidade":"Cariacica","cidadeIbge":"3201308","logradouro":"WASHINGTON LUIZ","numero":"124","complemento":null,"bairro":"JARDIM AMERICA","cep":"29140350"}},"enviarPorEmail":true,"itens":[{"cfop":"5101","codigo":"1010","descricao":"1 - PLACA CARRO PADRAO MERCOSUL","ncm":"83100000","quantidade":2,"unidadeMedida":"UN","valorUnitario":90.785,"impostos":{"icms":{"situacaoTributaria":"102","origem":0,"aliquota":0},"pis":{"situacaoTributaria":"07","aliquota":0},"cofins":{"situacaoTributaria":"07","aliquota":0}}}],"transporte":{"frete":{"modalidade":"PorContaDoEmitente","valor":null},"enderecoEntrega":{"tipoPessoaDestinatario":"F","cpfCnpjDestinatario":"47875925720","pais":"Brasil","uf":"ES","logradouro":"WASHINGTON LUIZ","cidade":"Cariacica","numero":"124","complemento":null,"bairro":"JARDIM AMERICA","cep":"29140350"},"volume":{"quantidade":1,"especie":null,"marca":null,"numeracao":"0","pesoLiquido":1,"pesoBruto":1}},"informacoesAdicionais":"Valor aproximado de tributos federais: R$ 0,00, estaduais: R$ 0,00 e municipais: R$ 0,00, segundo lei da Transparencia (Lei n 12.741/12 - NT 2013.003) - Fonte IBPT. DOCUMENTO EMITIDO POR MEI OU OPTANTE PELO SIMPLES NACIONAL. NAO GERA DIREITO A CREDITO FISCAL DE IPI. PLACA CARRO PADRAO MERCOSUL ALFANUMERICO SFR3H37. Obs: null","emissor":{"certificado":"/var/lib/tomcat/webapps/eva##007/files/30845107000100_prod.pfx","senhaCertificado":"Adminwj001","estado":"ES","munIbge":"3201308","mun":"Cariacica","endereco":"AVENIDA MARIO GURGEL","compl":"PAVMTO 01","bairro":"CAMPO GRANDE","razaoSocial":"CENTRAL DAS PLACAS LTDA","cnpjEmitente":"30845107000100","ie":"083492348","numNfe":5715,"serieNfe":1,"nro":"1259","cep":"29146012","idCSC":"0","tel":"2730910955","transp":null,"simplesNacional":1,"csc":"0"}}
-                                                </textarea>
-                                                <label for="" class="label-floating">JSON Envio</label>
-                                            </div>
-
+                                        <div class="relative col-span-3">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Data Criação" value="08/11/2022 19:58:14"/>
+                                            <label for="" class="label-floating">Data Criação</label>
                                         </div>
-                                            
-                                    </main>
-                                    <footer>
-                                        <!-- <div>
-                                            <button type="button" class="square-button primary-button w-" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                                                secondary button
-                                            </button>
-                                        </div> -->
-                                    </footer>
-                                </article>
-                            </div>
+
+                                        <div class="relative col-span-3">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Motivo" value="null"/>
+                                            <label for="" class="label-floating">Motivo</label>
+                                        </div>
+    
+                                        <div class="relative col-span-2">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Autorizado" value="1"/>
+                                            <label for="" class="label-floating">Autorizado</label>
+                                        </div>
+    
+                                        <div class="relative col-span-8">
+                                            <input disabled  id="" type="text" class="peer input-floating truncate" placeholder="Link XML" value="https://mg.promacplus.com.br/eva/notaFiscal/getXml?id=f6c1efa1-369e-45c9-a68e-160f7447285f"/>
+                                            <label for="" class="label-floating">Link XML</label>
+                                        </div>
+    
+                                        <div class="relative col-span-8">
+                                            <input disabled  id="" type="text" class="peer input-floating truncate" placeholder="Link DANFE" value="https://mg.promacplus.com.br/eva/notaFiscal/getDANFE?id=f6c1efa1-369e-45c9-a68e-160f7447285f"/>
+                                            <label for="" class="label-floating">Link DANFE</label>
+                                        </div>
+    
+                                        <div class="relative col-span-4">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Ultima NF-e" value="null"/>
+                                            <label for="" class="label-floating">Ultima NF-e</label>
+                                        </div>
+    
+                                        <div class="relative col-span-4">
+                                            <input disabled  id="" type="text" class="peer input-floating" placeholder="Ultima NFC-e" value="null"/>
+                                            <label for="" class="label-floating">Ultima NFC-e</label>
+                                        </div>
+    
+                                    </div>
+                                        
+                                </main>
+                                <footer>
+                                    <!-- <div>
+                                        <button type="button" class="square-button primary-button w-" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                            secondary button
+                                        </button>
+                                    </div> -->
+                                </footer>
+                            </article>
 
                         </div>
 
@@ -1778,7 +1728,7 @@
         <!-- Fim Modal -->
 
         <!-- Modal -->
-        <div class="modal fade bg-neutral/50 fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="modal-teste" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
+        <div class="modal fade bg-neutral/50 backdrop-blur-md fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="modal-teste" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
             <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none transition-all">
                 <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-2xl outline-none text-current">
                     <!-- Header Modal -->
@@ -1808,7 +1758,7 @@
         <!-- Fim Modal -->
 
         <!-- Modal -->
-        <div class="modal fade bg-neutral/50 fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="modal-invoice" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalXlLabel" aria-modal="true" role="dialog">
+        <div class="modal fade bg-gradient-to-r from-primary/70 to-info-light/70 backdrop-blur-md fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="modal-invoice" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalXlLabel" aria-modal="true" role="dialog">
             <div class="modal-dialog modal-dialog-centered relative pointer-events-none transition-all justify-center">
                 <div class="modal-content w-fit border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-2xl outline-none text-current">
                     <!-- Header Modal -->
@@ -1995,8 +1945,48 @@
                             cancelar
                         </button> -->
                         <button type="button" class="rounded-button primary-text-button" data-bs-dismiss="modal">
-                            sair
+                            fechar
                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fim Modal -->
+
+        <!-- Modal JSON Envio -->
+        <div class="modal fade bg-gradient-to-r from-primary/70 to-info-light/70 backdrop-blur-md fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="jsonEnvio" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none transition-all">
+                <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-2xl outline-none text-current">
+                    <!-- Header Modal -->
+                    <div class="modal-header flex">
+                        
+                        <h5 class="text-xl font-semibold leading-normal text-neutral-dark flex items-center select-none" id="">
+                            <span class="material-symbols-sharp mr-2">upload</span>JSON
+                        </h5>
+                        <!-- <button type="button"
+                            class="btn-close box-content w-4 h-4 !pr-2.5 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+                            data-bs-dismiss="modal" aria-label="Close">
+                        </button> -->
+                    </div>
+                    <!-- Body Modal -->
+                    <div class="modal-body relative p-4 z-50">
+                        
+                        <div class="relative col-span-8">
+                            <textarea disabled  id="" class="peer input-floating" rows="28" placeholder="JSON Envio">
+                                {"id":"82776173110","ambienteEmissao":"Producao","naturezaOperacao":"Venda","finalidade":"Normal","consumidorFinal":true,"indicadorPresencaConsumidor":"OperacaoPresencial","desconto":0.0,"descontounitario":0.0,"cliente":{"tipoPessoa":"F","indicadorContribuinteICMS":"NaoContribuinte","nome":"CARLOS ALBERTO FIOROTTI","email":"pedido.centraldasplacas@gmail.com","telefone":null,"cpfCnpj":"47875925720","inscricaoMunicipal":null,"inscricaoEstadual":"","endereco":{"pais":"Brasil","uf":"ES","cidade":"Cariacica","cidadeIbge":"3201308","logradouro":"WASHINGTON LUIZ","numero":"124","complemento":null,"bairro":"JARDIM AMERICA","cep":"29140350"}},"enviarPorEmail":true,"itens":[{"cfop":"5101","codigo":"1010","descricao":"1 - PLACA CARRO PADRAO MERCOSUL","ncm":"83100000","quantidade":2,"unidadeMedida":"UN","valorUnitario":90.785,"impostos":{"icms":{"situacaoTributaria":"102","origem":0,"aliquota":0},"pis":{"situacaoTributaria":"07","aliquota":0},"cofins":{"situacaoTributaria":"07","aliquota":0}}}],"transporte":{"frete":{"modalidade":"PorContaDoEmitente","valor":null},"enderecoEntrega":{"tipoPessoaDestinatario":"F","cpfCnpjDestinatario":"47875925720","pais":"Brasil","uf":"ES","logradouro":"WASHINGTON LUIZ","cidade":"Cariacica","numero":"124","complemento":null,"bairro":"JARDIM AMERICA","cep":"29140350"},"volume":{"quantidade":1,"especie":null,"marca":null,"numeracao":"0","pesoLiquido":1,"pesoBruto":1}},"informacoesAdicionais":"Valor aproximado de tributos federais: R$ 0,00, estaduais: R$ 0,00 e municipais: R$ 0,00, segundo lei da Transparencia (Lei n 12.741/12 - NT 2013.003) - Fonte IBPT. DOCUMENTO EMITIDO POR MEI OU OPTANTE PELO SIMPLES NACIONAL. NAO GERA DIREITO A CREDITO FISCAL DE IPI. PLACA CARRO PADRAO MERCOSUL ALFANUMERICO SFR3H37. Obs: null","emissor":{"certificado":"/var/lib/tomcat/webapps/eva##007/files/30845107000100_prod.pfx","senhaCertificado":"Adminwj001","estado":"ES","munIbge":"3201308","mun":"Cariacica","endereco":"AVENIDA MARIO GURGEL","compl":"PAVMTO 01","bairro":"CAMPO GRANDE","razaoSocial":"CENTRAL DAS PLACAS LTDA","cnpjEmitente":"30845107000100","ie":"083492348","numNfe":5715,"serieNfe":1,"nro":"1259","cep":"29146012","idCSC":"0","tel":"2730910955","transp":null,"simplesNacional":1,"csc":"0"}}
+                            </textarea>
+                            <label for="" class="label-floating">JSON Envio</label>
+                        </div>
+
+                    </div>
+                    <!-- Footer Modal -->
+                    <div class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 rounded-b-md gap-2 ">
+                        <button type="button" class="rounded-button secondary-text-button" data-bs-dismiss="modal">
+                            fechar
+                        </button>
+                        <!-- <button type="button" class="rounded-button primary-text-button">
+                            salvar
+                        </button> -->
                     </div>
                 </div>
             </div>

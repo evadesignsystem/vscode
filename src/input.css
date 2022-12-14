@@ -1,4 +1,9 @@
 @tailwind base;
+
+* {
+    font-variant-numeric: lining-nums;
+} 
+
 @tailwind components;
 
 :focus {
@@ -38,7 +43,7 @@
     @apply flex items-center py-2.5 px-5 rounded-xl inline-block;
 }
 .rounded-button {
-    @apply flex items-center py-2.5 pl-4 pr-5 rounded-full inline-block;
+    @apply flex items-center py-2.5 px-5 rounded-full inline-block;
 }
 .rounded-button-io {
     @apply flex items-center p-2.5 rounded-full inline-block;
